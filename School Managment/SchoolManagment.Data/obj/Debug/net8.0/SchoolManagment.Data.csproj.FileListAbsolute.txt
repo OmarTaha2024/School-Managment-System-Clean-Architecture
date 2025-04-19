@@ -9,3 +9,15 @@ D:\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.d
 D:\School Managment\SchoolManagment.Data\obj\Debug\net8.0\refint\SchoolManagment.Data.dll
 D:\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.pdb
 D:\School Managment\SchoolManagment.Data\obj\Debug\net8.0\ref\SchoolManagment.Data.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\bin\Debug\net8.0\SchoolManagment.Data.deps.json
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\bin\Debug\net8.0\SchoolManagment.Data.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\bin\Debug\net8.0\SchoolManagment.Data.pdb
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.AssemblyInfoInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.AssemblyInfo.cs
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.csproj.CoreCompileInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.sourcelink.json
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\refint\SchoolManagment.Data.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.pdb
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\ref\SchoolManagment.Data.dll

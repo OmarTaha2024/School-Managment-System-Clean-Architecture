@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bg7dAWDzNsfzuKt6tPmalpPOnr/9Z1SdRkXJGuqIy8LFRV6Ew9tYIDaX3Ixq2/dWOE3bC8+3Z0QxXaHQyGf2xg==",
+  "dgSpecHash": "tJA5h1Zxtg+cABpEjx2oX1aWzmrJ2Ibf8f6dfFITZ7FGBtecd45ETOvCO96zuna6sJqMeskb4p6Gkk70HKsx/g==",
   "success": true,
-  "projectFilePath": "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
+  "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

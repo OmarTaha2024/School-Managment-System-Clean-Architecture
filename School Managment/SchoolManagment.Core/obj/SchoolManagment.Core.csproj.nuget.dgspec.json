@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {}
+    "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {}
   },
   "projects": {
-    "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {
+    "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj",
+        "projectUniqueName": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj",
         "projectName": "SchoolManagment.Core",
-        "projectPath": "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj",
+        "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\School Managment\\SchoolManagment.Core\\obj\\",
+        "outputPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj": {
-                "projectPath": "D:\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj"
+              "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj": {
+                "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj": {
+    "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
+        "projectUniqueName": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
         "projectName": "SchoolManagment.Data",
-        "projectPath": "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
+        "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\School Managment\\SchoolManagment.Data\\obj\\",
+        "outputPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -128,14 +128,14 @@
         }
       }
     },
-    "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj": {
+    "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
+        "projectUniqueName": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
         "projectName": "SchoolManagment.Infrustructure",
-        "projectPath": "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
+        "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\School Managment\\SchoolManagment.Infrustructure\\obj\\",
+        "outputPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,8 +152,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj": {
-                "projectPath": "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj"
+              "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj": {
+                "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj"
               }
             }
           }
@@ -205,14 +205,14 @@
         }
       }
     },
-    "D:\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj": {
+    "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj",
+        "projectUniqueName": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj",
         "projectName": "SchoolManagment.Service",
-        "projectPath": "D:\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj",
+        "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\School Managment\\SchoolManagment.Service\\obj\\",
+        "outputPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,8 +229,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj": {
-                "projectPath": "D:\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj"
+              "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj": {
+                "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj"
               }
             }
           }

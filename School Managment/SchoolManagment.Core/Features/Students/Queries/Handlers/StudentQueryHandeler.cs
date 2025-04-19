@@ -13,7 +13,10 @@ using System.Threading.Tasks;
 
 namespace SchoolManagment.Core.Features.Students.Queries.Handlers
 {
-    internal class StudentHandeler :ResponseHandler, IRequestHandler<GetStudentListQuery, Response<List<GetStudentListResponse>>>
+    public class StudentQueryHandeler :ResponseHandler, 
+        IRequestHandler<GetStudentListQuery, Response<List<GetStudentListResponse>>>,
+        IRequestHandler<GetStudentByIDQuery, Response<GetSingleStudentResponse>>
+
     {
         #region Fields
         private readonly IStudentService _studentService;
@@ -22,19 +25,17 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
 
         #endregion
         #region CTOR
-        public StudentHandeler(IStudentService studentService, IMapper mapper)
+        public StudentQueryHandeler(IStudentService studentService, IMapper mapper)
         {
             _studentService = studentService;
             _mapper = mapper;
 
         }
 
-        public async Task<Response<List<GetStudentListResponse>>> Handle(GetStudentListQuery request, CancellationToken cancellationToken)
-        {
-            var StudentList = await _studentService.GetStudentsListAsync();
-            var StudentListMapper = _mapper.Map<List<GetStudentListResponse>>(StudentList);
-            return Success(StudentListMapper);
-        }
+
+
+
+
         #endregion
         #region Handle Functions
         //public async Task<List<GetStudentListResponse>> Handle(GetStudentListQuery request, CancellationToken cancellationToken)
@@ -43,7 +44,23 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
         //    var StudentListMapper = _mapper.Map<List<GetStudentListResponse>>(StudentList);
         //    return StudentListMapper;
         //}
+        public async Task<Response<List<GetStudentListResponse>>> Handle(GetStudentListQuery request, CancellationToken cancellationToken)
+        {
+            var StudentList = await _studentService.GetStudentsListAsync();
+            var StudentListMapper = _mapper.Map<List<GetStudentListResponse>>(StudentList);
+            return Success(StudentListMapper);
+        }
 
+        public async Task<Response<GetSingleStudentResponse>> Handle(GetStudentByIDQuery request, CancellationToken cancellationToken)
+        {
+            var student =await _studentService.GetStudentsByIdAsync(request.Id);
+            if (student == null)
+            {
+                return NotFound<GetSingleStudentResponse>();
+            }
+            var Result = _mapper.Map<GetSingleStudentResponse>(student);
+            return Success(Result);
+        }
 
         #endregion
 

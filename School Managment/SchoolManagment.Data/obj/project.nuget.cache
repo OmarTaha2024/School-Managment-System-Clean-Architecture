@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rXnBPif3nVkkTwxzoZ9jZZXoshMs3QB8niRwLmRxPNTvUl9lGJOW+52nUUxy6Y8KNYVX24TWeeRHEZfHg2A1ig==",
+  "dgSpecHash": "SrLqoMATLB+VVpwIoDvyqbO8pCPF8goUlD2DDF4D3Nvh5UYeK1LX7MvmCIJAf4aRFqo8RRrgk4YfRNDsB//xtA==",
   "success": true,
-  "projectFilePath": "D:\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
+  "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

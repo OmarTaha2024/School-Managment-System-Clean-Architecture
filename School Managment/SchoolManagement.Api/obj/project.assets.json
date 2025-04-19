@@ -4620,11 +4620,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
+      "projectUniqueName": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
       "projectName": "SchoolManagement.Api",
-      "projectPath": "D:\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
+      "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\School Managment\\SchoolManagement.Api\\obj\\",
+      "outputPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4641,8 +4641,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {
-              "projectPath": "D:\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj"
+            "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj": {
+              "projectPath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Core\\SchoolManagment.Core.csproj"
             }
           }
         }

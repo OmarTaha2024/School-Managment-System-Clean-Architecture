@@ -15,20 +15,32 @@ namespace SchoolManagment.Service.Services
     public class StudentService : IStudentService
     {
         #region Fields
-        private readonly IStudentRepository _IStudentRepository;
+        private readonly IStudentRepository _StudentRepository;
         #endregion
         #region Ctor
 
         public StudentService(IStudentRepository IStudentRepository)
         {
-            _IStudentRepository = IStudentRepository;
+            _StudentRepository = IStudentRepository;
         }
+
+      
         #endregion
         #region Handle Function
 
         public async Task<List<Student>> GetStudentsListAsync()
         {
-            return await _IStudentRepository.GetStudentsListAsync();
+            return await _StudentRepository.GetStudentsListAsync();
+        }
+        public async Task<Student> GetStudentsByIdAsync(int id)
+        {
+            // var srudent = await _IStudentRepository.GetByIdAsync(id);
+            // will return one record only and No track
+            var student = _StudentRepository.GetTableNoTracking()
+                .Include(x =>x.Department)
+                .Where(s => s.StudentId.Equals(id))
+                .FirstOrDefault(); 
+            return student;
         }
         #endregion
 

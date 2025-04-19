@@ -30,10 +30,6 @@ namespace SchoolManagment.Infrustructure.InfrustructureBases
         #endregion
 
 
-        #region Methods
-
-        #endregion
-
         #region Actions
         public virtual async Task<T> GetByIdAsync(int id)
         {

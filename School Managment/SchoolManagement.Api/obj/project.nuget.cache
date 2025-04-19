@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ivqqkJpI7+clmPJZdLtTuoIoZdstpKBu0zwZOk4lhC+mfk+uzB0I8nxIfSFo3ZA7RdSSenSgMAyUjgUtGBLSfQ==",
+  "dgSpecHash": "aqYshelxVX+b8BzEAX6bGDgSpn3vtfT76b3TA5HufK/rXE8yS9oC/dkKlUbGFZD9c5ukY00/BKXh5OBOb6/FmQ==",
   "success": true,
-  "projectFilePath": "D:\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
+  "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
