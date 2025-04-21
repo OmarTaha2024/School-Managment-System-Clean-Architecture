@@ -42,6 +42,17 @@ namespace SchoolManagment.Service.Services
                 .FirstOrDefault(); 
             return student;
         }
+
+        public async Task<string> AddAsync(Student student)
+        {
+            // check if name is exist 
+            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.Name.Equals(student.Name)).FirstOrDefault();
+            if (studentResult != null)
+                return "Exist";
+            // Add Student 
+            await _StudentRepository.AddAsync(student);
+            return "Added Successfully";
+        }
         #endregion
 
     }

@@ -18,6 +18,7 @@ namespace SchoolManagment.Data.AppMetaData
             public const string prefix = Rule + "Student";
             public const string List = prefix + "/List";
             public const string GetByID = prefix + SingleRoute;
+            public const string Create = prefix + "/AddStudent";
 
         }
 
