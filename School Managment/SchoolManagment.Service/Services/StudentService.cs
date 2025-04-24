@@ -1,14 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Infrustructure.Abstract;
-using SchoolManagment.Infrustructure.Data;
-using SchoolManagment.Infrustructure.Represatories;
 using SchoolManagment.Service.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagment.Service.Services
 {
@@ -24,7 +17,7 @@ namespace SchoolManagment.Service.Services
             _StudentRepository = IStudentRepository;
         }
 
-      
+
         #endregion
         #region Handle Function
 
@@ -37,9 +30,9 @@ namespace SchoolManagment.Service.Services
             // var srudent = await _IStudentRepository.GetByIdAsync(id);
             // will return one record only and No track
             var student = _StudentRepository.GetTableNoTracking()
-                .Include(x =>x.Department)
+                .Include(x => x.Department)
                 .Where(s => s.StudentId.Equals(id))
-                .FirstOrDefault(); 
+                .FirstOrDefault();
             return student;
         }
 
@@ -52,6 +45,14 @@ namespace SchoolManagment.Service.Services
             // Add Student 
             await _StudentRepository.AddAsync(student);
             return "Added Successfully";
+        }
+
+        public async Task<bool> IsNameExist(string name)
+        {
+            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.Name.Equals(name)).FirstOrDefault();
+            if (studentResult == null)
+                return false;
+            return true;
         }
         #endregion
 
