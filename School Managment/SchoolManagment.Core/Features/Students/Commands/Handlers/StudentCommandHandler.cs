@@ -4,15 +4,12 @@ using SchoolManagment.Core.Bases;
 using SchoolManagment.Core.Features.Students.Commands.Models;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Service.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagment.Core.Features.Students.Commands.Handlers
 {
-    public class StudentCommandHandler : ResponseHandler, IRequestHandler<AddStudentCommand, Response<String>>
+    public class StudentCommandHandler : ResponseHandler,
+        IRequestHandler<AddStudentCommand, Response<String>>,
+        IRequestHandler<EditStudentCommand, Response<String>>
     {
         #region Fields
         private readonly IStudentService _studentService;
@@ -36,15 +33,29 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
             // Add using Service 
             var result = await _studentService.AddAsync(studentmapper);
             //check condition
-            if (result == "Exist")
-            {
-                return UnprocessableEntity<string>("Name is Exist");
-            }
-            else if (result == "Added Successfully")
+            if (result == "Added Successfully")
                 return Created<string>("Added Successfully");
-            else 
+            else
                 return BadRequest<string>();
             //return Responce 
+        }
+
+        public async Task<Response<string>> Handle(EditStudentCommand request, CancellationToken cancellationToken)
+        {
+            //check if student is exsit or not 
+            var student = await _studentService.GetStudentsByIdAsync(request.Id);
+            // return not found 
+            if (student == null) return NotFound<string>();
+            //Mapping Between Request and Student 
+            var studentmapper = _imapper.Map<Student>(request);
+
+            // call service for edit 
+            var result = await _studentService.UpdataAsync(studentmapper);
+
+            //return response
+            if (result == "Updated Successfully")
+                return Success<string>("Updated Successfully");
+            return BadRequest<string>();
         }
         #endregion
 

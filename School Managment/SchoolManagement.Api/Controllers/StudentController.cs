@@ -1,6 +1,4 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SchoolManagement.Api.Base;
 using SchoolManagment.Core.Features.Students.Commands.Models;
 using SchoolManagment.Core.Features.Students.Queries.Models;
@@ -25,9 +23,15 @@ namespace SchoolManagement.Api.Controllers
             var responce = await Mediator.Send(new GetStudentByIDQuery(id));
             return NewResult(responce);
         }
-        [HttpGet(Router.StudentRouting.Create)]
+        [HttpPost(Router.StudentRouting.Create)]
 
-        public async Task<IActionResult> AddStudent([FromBody] AddStudentCommand _command) 
+        public async Task<IActionResult> AddStudent([FromBody] AddStudentCommand _command)
+        {
+            var responce = await Mediator.Send(_command);
+            return NewResult(responce);
+        }
+        [HttpPut(Router.StudentRouting.Edit)]
+        public async Task<IActionResult> EditStudent([FromBody] EditStudentCommand _command)
         {
             var responce = await Mediator.Send(_command);
             return NewResult(responce);
