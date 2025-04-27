@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
+using SchoolManagment.Data.Enums;
 using SchoolManagment.Infrustructure.Abstract;
 using SchoolManagment.Service.Abstracts;
 
@@ -100,7 +101,7 @@ namespace SchoolManagment.Service.Services
             return _StudentRepository.GetTableNoTracking().Include(x => x.Department).AsQueryable();
         }
 
-        public IQueryable<Student> FilterStudentsPaginatedQueryable(string search)
+        public IQueryable<Student> FilterStudentsPaginatedQueryable(StudentOrderingEnum orderingEnum, string search)
         {
             var querable = _StudentRepository.GetTableNoTracking().Include(x => x.Department).AsQueryable();
             if (search != null)
@@ -108,6 +109,22 @@ namespace SchoolManagment.Service.Services
                 querable = querable.Where(s => s.Name.Contains(search) || s.Address.Contains(search));
 
             }
+            switch (orderingEnum)
+            {
+                case StudentOrderingEnum.StudID:
+                    querable = querable.OrderBy(x => x.StudentId);
+                    break;
+                case StudentOrderingEnum.Name:
+                    querable = querable.OrderBy(x => x.Name);
+                    break;
+                case StudentOrderingEnum.Address:
+                    querable = querable.OrderBy(x => x.Address);
+                    break;
+                case StudentOrderingEnum.DepartmentName:
+                    querable = querable.OrderBy(x => x.Department.Name);
+                    break;
+            }
+
             return querable;
         }
 

@@ -1,4 +1,5 @@
 ﻿using SchoolManagment.Data.Entities;
+using SchoolManagment.Data.Enums;
 
 namespace SchoolManagment.Service.Abstracts
 {
@@ -7,7 +8,7 @@ namespace SchoolManagment.Service.Abstracts
 
         public Task<List<Student>> GetStudentsListAsync();
         public IQueryable<Student> GetStudentsQueryableList();
-        public IQueryable<Student> FilterStudentsPaginatedQueryable(string search);
+        public IQueryable<Student> FilterStudentsPaginatedQueryable(StudentOrderingEnum orderingEnum, string search);
 
         public Task<Student> GetStudentsByIdwithIncludeAsync(int id);
         public Task<Student> GetStudentsByIdAsync(int id);

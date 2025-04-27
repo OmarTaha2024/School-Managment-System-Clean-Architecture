@@ -63,7 +63,7 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
         {
             Expression<Func<Student, GetStudentPaginatedListResponse>> ex = ex => new GetStudentPaginatedListResponse(ex.StudentId, ex.Name, ex.Address, ex.Department.Name);
             //  var queryable = _studentService.GetStudentsQueryableList();
-            var filterqueryable = _studentService.FilterStudentsPaginatedQueryable(request.Search);
+            var filterqueryable = _studentService.FilterStudentsPaginatedQueryable(request.OrderBy, request.Search);
             var paginatedlist = await filterqueryable.Select(ex).ToPaginatedListAsync(request.PageNumber, request.PageSize);
             return paginatedlist;
         }
