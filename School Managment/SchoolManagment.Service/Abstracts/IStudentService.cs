@@ -6,6 +6,9 @@ namespace SchoolManagment.Service.Abstracts
     {
 
         public Task<List<Student>> GetStudentsListAsync();
+        public IQueryable<Student> GetStudentsQueryableList();
+        public IQueryable<Student> FilterStudentsPaginatedQueryable(string search);
+
         public Task<Student> GetStudentsByIdwithIncludeAsync(int id);
         public Task<Student> GetStudentsByIdAsync(int id);
         public Task<String> AddAsync(Student student);

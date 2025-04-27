@@ -95,6 +95,22 @@ namespace SchoolManagment.Service.Services
 
         }
 
+        public IQueryable<Student> GetStudentsQueryableList()
+        {
+            return _StudentRepository.GetTableNoTracking().Include(x => x.Department).AsQueryable();
+        }
+
+        public IQueryable<Student> FilterStudentsPaginatedQueryable(string search)
+        {
+            var querable = _StudentRepository.GetTableNoTracking().Include(x => x.Department).AsQueryable();
+            if (search != null)
+            {
+                querable = querable.Where(s => s.Name.Contains(search) || s.Address.Contains(search));
+
+            }
+            return querable;
+        }
+
 
         #endregion
 
