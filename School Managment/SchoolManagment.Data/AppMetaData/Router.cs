@@ -14,6 +14,7 @@
             public const string GetByID = prefix + SingleRoute;
             public const string Create = prefix + "/AddStudent";
             public const string Edit = prefix + "/EditStudent";
+            public const string Delete = prefix + "/DeleteStudent";
 
         }
 

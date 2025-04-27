@@ -30,12 +30,20 @@ namespace SchoolManagment.Service.Services
             // var srudent = await _IStudentRepository.GetByIdAsync(id);
             // will return one record only and No track
             var student = _StudentRepository.GetTableNoTracking()
+                .Where(s => s.StudentId.Equals(id))
+                .FirstOrDefault();
+            return student;
+        }
+        public async Task<Student> GetStudentsByIdwithIncludeAsync(int id)
+        {
+            // var srudent = await _IStudentRepository.GetByIdAsync(id);
+            // will return one record only and No track
+            var student = _StudentRepository.GetTableNoTracking()
                 .Include(x => x.Department)
                 .Where(s => s.StudentId.Equals(id))
                 .FirstOrDefault();
             return student;
         }
-
         public async Task<string> AddAsync(Student student)
         {
             // check if name is exist 
@@ -69,6 +77,25 @@ namespace SchoolManagment.Service.Services
             await _StudentRepository.UpdateAsync(student);
             return "Updated Successfully";
         }
+
+        public async Task<string> DeleteAsync(Student student)
+        {
+            var trans = _StudentRepository.BeginTransaction();
+            try
+            {
+                await _StudentRepository.DeleteAsync(student);
+                await trans.CommitAsync();
+                return "Deleted Successfully";
+            }
+            catch
+            {
+                await trans.RollbackAsync();
+                return "falied";
+            }
+
+        }
+
+
         #endregion
 
     }

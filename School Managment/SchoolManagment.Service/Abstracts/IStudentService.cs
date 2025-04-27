@@ -6,9 +6,11 @@ namespace SchoolManagment.Service.Abstracts
     {
 
         public Task<List<Student>> GetStudentsListAsync();
+        public Task<Student> GetStudentsByIdwithIncludeAsync(int id);
         public Task<Student> GetStudentsByIdAsync(int id);
         public Task<String> AddAsync(Student student);
         public Task<String> UpdataAsync(Student student);
+        public Task<String> DeleteAsync(Student student);
         public Task<bool> IsNameExist(string name);
         public Task<bool> IsNameExistExcludeSelf(string name, int id);
 

@@ -1,16 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using SchoolManagment.Infrustructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolManagment.Data.Entities;
 
 namespace SchoolManagment.Infrustructure.InfrustructureBases
 {
-    public class GenericRepositoryAsync<T>:IGenericRepositoryAsync<T> where T : class
+    public class GenericRepositoryAsync<T> : IGenericRepositoryAsync<T> where T : class
     {
 
         #region Vars / Props

@@ -9,7 +9,9 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
 {
     public class StudentCommandHandler : ResponseHandler,
         IRequestHandler<AddStudentCommand, Response<String>>,
-        IRequestHandler<EditStudentCommand, Response<String>>
+        IRequestHandler<EditStudentCommand, Response<String>>,
+        IRequestHandler<DeleteStudentCommand, Response<String>>
+
     {
         #region Fields
         private readonly IStudentService _studentService;
@@ -56,6 +58,21 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
             if (result == "Updated Successfully")
                 return Success<string>("Updated Successfully");
             return BadRequest<string>();
+        }
+
+        public async Task<Response<string>> Handle(DeleteStudentCommand request, CancellationToken cancellationToken)
+        {
+            //check if student is exsit or not 
+            var student = await _studentService.GetStudentsByIdAsync(request.ID);
+            // return not found 
+            if (student == null) return NotFound<string>();
+            // call service for edit 
+            var result = await _studentService.DeleteAsync(student);
+
+            //return response
+            if (result == "Deleted Successfully")
+                return Deleted<string>();
+            else return Deleted<string>("Falied to delete");
         }
         #endregion
 

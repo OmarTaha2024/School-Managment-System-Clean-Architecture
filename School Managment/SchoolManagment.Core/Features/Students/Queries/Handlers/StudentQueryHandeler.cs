@@ -3,17 +3,11 @@ using MediatR;
 using SchoolManagment.Core.Bases;
 using SchoolManagment.Core.Features.Students.Queries.Models;
 using SchoolManagment.Core.Features.Students.Queries.Results;
-using SchoolManagment.Data.Entities;
 using SchoolManagment.Service.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagment.Core.Features.Students.Queries.Handlers
 {
-    public class StudentQueryHandeler :ResponseHandler, 
+    public class StudentQueryHandeler : ResponseHandler,
         IRequestHandler<GetStudentListQuery, Response<List<GetStudentListResponse>>>,
         IRequestHandler<GetStudentByIDQuery, Response<GetSingleStudentResponse>>
 
@@ -53,7 +47,7 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
 
         public async Task<Response<GetSingleStudentResponse>> Handle(GetStudentByIDQuery request, CancellationToken cancellationToken)
         {
-            var student =await _studentService.GetStudentsByIdAsync(request.Id);
+            var student = await _studentService.GetStudentsByIdwithIncludeAsync(request.Id);
             if (student == null)
             {
                 return NotFound<GetSingleStudentResponse>();
