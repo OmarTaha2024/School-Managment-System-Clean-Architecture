@@ -48,7 +48,7 @@ namespace SchoolManagment.Service.Services
         public async Task<string> AddAsync(Student student)
         {
             // check if name is exist 
-            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.Name.Equals(student.Name)).FirstOrDefault();
+            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.NameAr.Equals(student.NameAr)).FirstOrDefault();
             if (studentResult != null)
                 return "Exist";
             // Add Student 
@@ -58,7 +58,7 @@ namespace SchoolManagment.Service.Services
 
         public async Task<bool> IsNameExist(string name)
         {
-            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.Name.Equals(name)).FirstOrDefault();
+            var studentResult = _StudentRepository.GetTableNoTracking().Where(s => s.NameAr.Equals(name)).FirstOrDefault();
             if (studentResult == null)
                 return false;
             return true;
@@ -66,7 +66,7 @@ namespace SchoolManagment.Service.Services
 
         public async Task<bool> IsNameExistExcludeSelf(string name, int id)
         {
-            var studentResult = await _StudentRepository.GetTableNoTracking().Where(s => s.Name.Equals(name) & !s.StudentId.Equals(id)).FirstOrDefaultAsync();
+            var studentResult = await _StudentRepository.GetTableNoTracking().Where(s => s.NameAr.Equals(name) & !s.StudentId.Equals(id)).FirstOrDefaultAsync();
             if (studentResult == null)
                 return false;
             return true;
@@ -106,7 +106,7 @@ namespace SchoolManagment.Service.Services
             var querable = _StudentRepository.GetTableNoTracking().Include(x => x.Department).AsQueryable();
             if (search != null)
             {
-                querable = querable.Where(s => s.Name.Contains(search) || s.Address.Contains(search));
+                querable = querable.Where(s => s.NameAr.Contains(search) || s.Address.Contains(search));
 
             }
             switch (orderingEnum)
@@ -115,13 +115,13 @@ namespace SchoolManagment.Service.Services
                     querable = querable.OrderBy(x => x.StudentId);
                     break;
                 case StudentOrderingEnum.Name:
-                    querable = querable.OrderBy(x => x.Name);
+                    querable = querable.OrderBy(x => x.NameAr);
                     break;
                 case StudentOrderingEnum.Address:
                     querable = querable.OrderBy(x => x.Address);
                     break;
                 case StudentOrderingEnum.DepartmentName:
-                    querable = querable.OrderBy(x => x.Department.Name);
+                    querable = querable.OrderBy(x => x.Department.NameAr);
                     break;
             }
 

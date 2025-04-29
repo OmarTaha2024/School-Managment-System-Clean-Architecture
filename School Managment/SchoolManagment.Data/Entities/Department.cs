@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using SchoolManagment.Data.Commons;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagment.Data.Entities
 {
-    public class Department
+    public class Department : GeneralLocalizableEntity
     {
         public Department()
         {
@@ -21,9 +16,10 @@ namespace SchoolManagment.Data.Entities
         public int Did { get; set; }
         [StringLength(200)]
         [Required]
-        public string Name { get; set; }
+        public string NameAr { get; set; }
         [StringLength(200)]
-
+        [Required]
+        public string NameEn { get; set; }
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<DepartmetSubject> Departments { get; set; }
 
