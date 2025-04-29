@@ -19,7 +19,6 @@ namespace SchoolManagment.Core
             // 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
-
             return services;
         }
     }

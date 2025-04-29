@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Localization;
 using SchoolManagment.Core.Bases;
 using SchoolManagment.Core.Features.Students.Queries.Models;
 using SchoolManagment.Core.Features.Students.Queries.Results;
+using SchoolManagment.Core.Resources;
 using SchoolManagment.Core.Wrappers;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Service.Abstracts;
@@ -19,14 +21,17 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
         #region Fields
         private readonly IStudentService _studentService;
         private readonly IMapper _mapper;
+        private readonly IStringLocalizer<SharedResources> _stringLocalizer;
 
 
         #endregion
         #region CTOR
-        public StudentQueryHandeler(IStudentService studentService, IMapper mapper)
+        public StudentQueryHandeler(IStudentService studentService, IMapper mapper, IStringLocalizer<SharedResources> stringLocalizer) : base(stringLocalizer)
         {
             _studentService = studentService;
             _mapper = mapper;
+            _stringLocalizer = stringLocalizer;
+
 
         }
 
@@ -54,7 +59,7 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
             var student = await _studentService.GetStudentsByIdwithIncludeAsync(request.Id);
             if (student == null)
             {
-                return NotFound<GetSingleStudentResponse>();
+                return NotFound<GetSingleStudentResponse>(_stringLocalizer[SharedResourcesKeys.NotFound]);
             }
             var Result = _mapper.Map<GetSingleStudentResponse>(student);
             return Success(Result);

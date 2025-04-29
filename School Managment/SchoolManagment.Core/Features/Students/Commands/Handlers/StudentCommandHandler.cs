@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Localization;
 using SchoolManagment.Core.Bases;
 using SchoolManagment.Core.Features.Students.Commands.Models;
+using SchoolManagment.Core.Resources;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Service.Abstracts;
 
@@ -16,14 +18,17 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
         #region Fields
         private readonly IStudentService _studentService;
         private readonly IMapper _imapper;
+        private readonly IStringLocalizer<SharedResources> _stringLocalizer;
 
 
         #endregion
         #region Ctor
-        public StudentCommandHandler(IStudentService studentService, IMapper imapper)
+        public StudentCommandHandler(IStudentService studentService, IMapper imapper, IStringLocalizer<SharedResources> stringLocalizer) : base(stringLocalizer)
         {
             _studentService = studentService;
             _imapper = imapper;
+            _stringLocalizer = stringLocalizer;
+
 
         }
         #endregion
@@ -36,7 +41,7 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
             var result = await _studentService.AddAsync(studentmapper);
             //check condition
             if (result == "Added Successfully")
-                return Created<string>("Added Successfully");
+                return Created<string>(_stringLocalizer[SharedResourcesKeys.Created]);
             else
                 return BadRequest<string>();
             //return Responce 
@@ -56,7 +61,7 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
 
             //return response
             if (result == "Updated Successfully")
-                return Success<string>("Updated Successfully");
+                return Success<string>(_stringLocalizer[SharedResourcesKeys.Success]);
             return BadRequest<string>();
         }
 
@@ -72,7 +77,7 @@ namespace SchoolManagment.Core.Features.Students.Commands.Handlers
             //return response
             if (result == "Deleted Successfully")
                 return Deleted<string>();
-            else return Deleted<string>("Falied to delete");
+            else return Deleted<string>(_stringLocalizer[SharedResourcesKeys.DeletedFailed]);
         }
         #endregion
 

@@ -37,3 +37,10 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.C
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\refint\SchoolManagment.Core.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\SchoolManagment.Core.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\ref\SchoolManagment.Core.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\bin\Debug\net8.0\Ar\SchoolManagment.Core.resources.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\bin\Debug\net8.0\En\SchoolManagment.Core.resources.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\SchoolManagment.Core.Resources.SharedResources.Ar.resources
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\SchoolManagment.Core.Resources.SharedResources.En.resources
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\SchoolManagment.Core.csproj.GenerateResource.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\Ar\SchoolManagment.Core.resources.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Core\obj\Debug\net8.0\En\SchoolManagment.Core.resources.dll
