@@ -20,7 +20,6 @@ namespace SchoolManagment.Infrustructure.Data
         public DbSet<Ins_Subject> Ins_Subject { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
