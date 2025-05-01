@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
+using System.Reflection;
 
 namespace SchoolManagment.Infrustructure.Data
 {
@@ -20,20 +21,8 @@ namespace SchoolManagment.Infrustructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-
-            modelBuilder.Entity<DepartmetSubject>()
-                .HasKey(e => new { e.SubID, e.DID });
-            modelBuilder.Entity<Ins_Subject>()
-                .HasKey(e => new { e.SubId, e.InsId });
-            modelBuilder.Entity<StudentSubject>()
-                .HasKey(e => new { e.SubID, e.StudID });
-            modelBuilder.Entity<Instructor>()
-                .HasOne(e => e.Supervisor)
-                .WithMany(x => x.Instructors)
-                .HasForeignKey(e => e.SupervisorId)
-                .OnDelete(DeleteBehavior.Restrict);
-
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }
