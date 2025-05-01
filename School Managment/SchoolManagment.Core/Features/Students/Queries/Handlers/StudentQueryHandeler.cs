@@ -68,7 +68,7 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
         }
         public async Task<PaginatedResult<GetStudentPaginatedListResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
         {
-            Expression<Func<Student, GetStudentPaginatedListResponse>> ex = ex => new GetStudentPaginatedListResponse(ex.StudentId, ex.GetLocalized(ex.NameAr, ex.NameEn), ex.Address, ex.Department.GetLocalized(ex.NameAr, ex.NameEn));
+            Expression<Func<Student, GetStudentPaginatedListResponse>> ex = ex => new GetStudentPaginatedListResponse(ex.StudID, ex.GetLocalized(ex.NameAr, ex.NameEn), ex.Address, ex.Department.GetLocalized(ex.NameAr, ex.NameEn));
             //  var queryable = _studentService.GetStudentsQueryableList();
             var filterqueryable = _studentService.FilterStudentsPaginatedQueryable(request.OrderBy, request.Search);
             var paginatedlist = await filterqueryable.Select(ex).ToPaginatedListAsync(request.PageNumber, request.PageSize);

@@ -1,27 +1,38 @@
 ﻿using SchoolManagment.Data.Commons;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SchoolManagment.Data.Entities
 {
-    public class Department : GeneralLocalizableEntity
+
+    public partial class Department : GeneralLocalizableEntity
     {
         public Department()
         {
             Students = new HashSet<Student>();
-            Departments = new HashSet<DepartmetSubject>();
-
-
+            DepartmentSubjects = new HashSet<DepartmetSubject>();
+            Instructors = new HashSet<Instructor>();
         }
         [Key]
-        public int Did { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int DID { get; set; }
+        //[StringLength(500)]
+        public string? DNameAr { get; set; }
         [StringLength(200)]
-        [Required]
-        public string NameAr { get; set; }
-        [StringLength(200)]
-        [Required]
-        public string NameEn { get; set; }
+        public string? DNameEn { get; set; }
+
+        public int? InsManager { get; set; }
+
+        [InverseProperty("Department")]
         public virtual ICollection<Student> Students { get; set; }
-        public virtual ICollection<DepartmetSubject> Departments { get; set; }
+        [InverseProperty("Department")]
+        public virtual ICollection<DepartmetSubject> DepartmentSubjects { get; set; }
+        [InverseProperty("department")]
+        public virtual ICollection<Instructor> Instructors { get; set; }
+
+        [ForeignKey("InsManager")]
+        [InverseProperty("departmentManager")]
+        public virtual Instructor? Instructor { get; set; }
 
     }
 }

@@ -1,16 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
 
 namespace SchoolManagment.Infrustructure.Data
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -22,5 +15,25 @@ namespace SchoolManagment.Infrustructure.Data
         public DbSet<Subjects> Subjects { get; set; }
         public DbSet<StudentSubject> StudentSubject { get; set; }
         public DbSet<DepartmetSubject> DepartmetSubject { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<Ins_Subject> Ins_Subject { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+
+            modelBuilder.Entity<DepartmetSubject>()
+                .HasKey(e => new { e.SubID, e.DID });
+            modelBuilder.Entity<Ins_Subject>()
+                .HasKey(e => new { e.SubId, e.InsId });
+            modelBuilder.Entity<StudentSubject>()
+                .HasKey(e => new { e.SubID, e.StudID });
+            modelBuilder.Entity<Instructor>()
+                .HasOne(e => e.Supervisor)
+                .WithMany(x => x.Instructors)
+                .HasForeignKey(e => e.SupervisorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
