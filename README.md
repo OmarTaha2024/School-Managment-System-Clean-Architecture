@@ -1,8 +1,8 @@
-### School-Managment-System-Clean-Architecture
-# Description
+#School-Managment-System-Clean-Architecture
+## Description
 SchoolProject Using Asp.net Core Web Api Using Clean Architecture Based On Code First
 
-# Components
+## Components
 
 
 1.CQRS Design Pattern
