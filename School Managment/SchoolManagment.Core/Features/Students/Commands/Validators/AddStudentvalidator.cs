@@ -11,13 +11,16 @@ namespace SchoolManagment.Core.Features.Students.Commands.Validators
         #region Feilds
         private readonly IStudentService _studentService;
         private readonly IStringLocalizer<SharedResources> _Localizer;
+        private readonly IDepartmentService _departmentService;
+
 
         #endregion
         #region ctor
-        public AddStudentvalidator(IStudentService studentService, IStringLocalizer<SharedResources> stringLocalizer)
+        public AddStudentvalidator(IStudentService studentService, IDepartmentService departmentService, IStringLocalizer<SharedResources> stringLocalizer)
         {
             _studentService = studentService;
             _Localizer = stringLocalizer;
+            _departmentService = departmentService;
 
             ApplyValidationRules();
             ApplyCustomValidationRules();
@@ -36,14 +39,21 @@ namespace SchoolManagment.Core.Features.Students.Commands.Validators
                 .MaximumLength(10).WithMessage(_Localizer[SharedResourcesKeys.MaxLengthis10]);
             RuleFor(x => x.Address)
                 .NotEmpty().WithMessage(_Localizer[SharedResourcesKeys.NotEmpty]);
+            RuleFor(x => x.DepartmentID)
+               .NotEmpty().WithMessage(_Localizer[SharedResourcesKeys.NotEmpty])
+                .NotNull().WithMessage(_Localizer[SharedResourcesKeys.Required]);
+
 
         }
         public void ApplyCustomValidationRules()
         {
             RuleFor(x => x.NameAr)
                 .MustAsync(async (key, CancellationToken) => !await _studentService.IsNameExistAr(key)).WithMessage(_Localizer[SharedResourcesKeys.IsExist]);
-            RuleFor(x => x.NameEn)
-                .MustAsync(async (key, CancellationToken) => !await _studentService.IsNameExistEn(key)).WithMessage(_Localizer[SharedResourcesKeys.IsExist]);
+
+            RuleFor(x => x.DepartmentID)
+           .MustAsync(async (key, CancellationToken) => await _departmentService.IsDeptExist(key)).WithMessage(_Localizer[SharedResourcesKeys.IsNotExist]);
+
+
         }
         #endregion
     }

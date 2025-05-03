@@ -8,6 +8,7 @@ namespace SchoolManagment.Service.Abstracts
 
         public Task<List<Student>> GetStudentsListAsync();
         public IQueryable<Student> GetStudentsQueryableList();
+        public IQueryable<Student> GetStudentQueryableList(int id);
         public IQueryable<Student> FilterStudentsPaginatedQueryable(StudentOrderingEnum orderingEnum, string search);
 
         public Task<Student> GetStudentsByIdwithIncludeAsync(int id);

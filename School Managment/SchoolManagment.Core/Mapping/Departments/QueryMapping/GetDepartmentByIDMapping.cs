@@ -12,8 +12,8 @@ namespace SchoolManagment.Core.Mapping.Departments
                 .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.DID))
                 .ForMember(dest => dest.ManagerName, opt => opt.MapFrom(src => src.GetLocalized(src.Instructor.ENameAr, src.Instructor.ENameEn)))
                 .ForMember(dest => dest.subjectList, opt => opt.MapFrom(src => src.DepartmentSubjects))
-                .ForMember(dest => dest.InstructorsList, opt => opt.MapFrom(src => src.Instructors))
-                .ForMember(dest => dest.studentList, opt => opt.MapFrom(src => src.Students));
+                .ForMember(dest => dest.InstructorsList, opt => opt.MapFrom(src => src.Instructors));
+            //  .ForMember(dest => dest.studentList, opt => opt.MapFrom(src => src.Students));
 
 
             CreateMap<DepartmetSubject, SubjectResponse>()
@@ -24,9 +24,9 @@ namespace SchoolManagment.Core.Mapping.Departments
                .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.InsId))
                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.GetLocalized(src.ENameAr, src.ENameEn)));
 
-            CreateMap<Student, StudentResponse>()
-               .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.StudID))
-               .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.GetLocalized(src.NameAr, src.NameEn)));
+            //CreateMap<Student, StudentResponse>()
+            //   .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.StudID))
+            //   .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.GetLocalized(src.NameAr, src.NameEn)));
         }
     }
 }

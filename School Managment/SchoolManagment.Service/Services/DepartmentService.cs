@@ -25,11 +25,16 @@ namespace SchoolManagment.Service.Services
             var department = await _departmentRepository.GetTableNoTracking()
             .Where(d => d.DID.Equals(id))
             .Include(x => x.DepartmentSubjects).ThenInclude(x => x.Subject)
-            .Include(x => x.Students)
             .Include(x => x.Instructors)
             .Include(x => x.Instructor)
             .FirstOrDefaultAsync();
             return department;
+        }
+
+        public async Task<bool> IsDeptExist(int id)
+        {
+            return await _departmentRepository.GetTableNoTracking().AnyAsync(x => x.DID.Equals(id));
+
         }
         #endregion
 

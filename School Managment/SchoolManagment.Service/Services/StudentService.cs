@@ -143,6 +143,13 @@ namespace SchoolManagment.Service.Services
             return querable;
         }
 
+        public IQueryable<Student> GetStudentQueryableList(int id)
+        {
+            return _StudentRepository.GetTableNoTracking()
+                .Where(x => x.DID == id);
+        }
+
+
 
         #endregion
 
