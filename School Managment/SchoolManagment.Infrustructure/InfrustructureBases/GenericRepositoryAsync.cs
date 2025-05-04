@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using SchoolManagment.Infrustructure.Data;
+using SchoolManagment.Infrustructure.Context;
 
 namespace SchoolManagment.Infrustructure.InfrustructureBases
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Infrustructure.Abstract;
-using SchoolManagment.Infrustructure.Data;
+using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Infrustructure.InfrustructureBases;
 
 namespace SchoolManagment.Infrustructure.Represatories

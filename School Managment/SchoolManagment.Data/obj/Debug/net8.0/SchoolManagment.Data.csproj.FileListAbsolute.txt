@@ -21,3 +21,4 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.D
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\refint\SchoolManagment.Data.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\ref\SchoolManagment.Data.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagment.Data\obj\Debug\net8.0\SchoolManagment.Data.csproj.AssemblyReference.cache

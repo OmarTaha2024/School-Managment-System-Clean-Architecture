@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using SchoolManagment.Core;
 using SchoolManagment.Core.MiddleWare;
 using SchoolManagment.Infrustructure;
-using SchoolManagment.Infrustructure.Data;
+using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Service;
 using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +22,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 });
 
 #region Dependency injection
-builder.Services.AddModuleInfrustructureDependencies().AddModuleServiceDependencies().AddModuleCoreDependencies();
+builder.Services.AddModuleInfrustructureDependencies()
+    .AddModuleServiceDependencies()
+    .AddModuleCoreDependencies()
+    .AddServiceRegisteration();
 #endregion
 
 #region Localization

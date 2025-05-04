@@ -1,13 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Infrustructure.Abstract;
-using SchoolManagment.Infrustructure.Data;
+using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Infrustructure.InfrustructureBases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagment.Infrustructure.Represatories
 {
