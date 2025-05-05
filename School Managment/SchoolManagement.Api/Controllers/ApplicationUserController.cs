@@ -9,13 +9,7 @@ namespace SchoolManagement.Api.Controllers
     [ApiController]
     public class ApplicationUserController : AppControllerBase
     {
-        [HttpPost(Router.ApplicationUserRouting.Create)]
 
-        public async Task<IActionResult> AddUser([FromBody] AddUserCommand _command)
-        {
-            var responce = await Mediator.Send(_command);
-            return NewResult(responce);
-        }
         [HttpGet(Router.ApplicationUserRouting.paginated)]
         public async Task<IActionResult> GetUserspaginatedList([FromQuery] GetUserPaginationQuery query)
         {
@@ -27,6 +21,19 @@ namespace SchoolManagement.Api.Controllers
         public async Task<IActionResult> GetUserByEmail([FromRoute] string email)
         {
             var responce = await Mediator.Send(new GetUserByEmailQuery(email));
+            return NewResult(responce);
+        }
+        [HttpPost(Router.ApplicationUserRouting.Create)]
+
+        public async Task<IActionResult> AddUser([FromBody] AddUserCommand _command)
+        {
+            var responce = await Mediator.Send(_command);
+            return NewResult(responce);
+        }
+        [HttpPut(Router.ApplicationUserRouting.Edit)]
+        public async Task<IActionResult> Edituser([FromBody] EditUserCommand _command)
+        {
+            var responce = await Mediator.Send(_command);
             return NewResult(responce);
         }
     }

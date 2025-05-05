@@ -31,6 +31,7 @@
             public const string Email = prefix + "/{email}";
             public const string Create = prefix + "/AddUser";
             public const string paginated = prefix + "/GetUserspaginatedList";
+            public const string Edit = prefix + "/Edituser";
 
 
         }

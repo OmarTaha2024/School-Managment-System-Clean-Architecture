@@ -9,7 +9,9 @@ using SchoolManagment.Data.Entities.Identity;
 
 namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
 {
-    public class UserCommandHandler : ResponseHandler, IRequestHandler<AddUserCommand, Response<string>>
+    public class UserCommandHandler : ResponseHandler,
+        IRequestHandler<AddUserCommand, Response<string>>,
+        IRequestHandler<EditUserCommand, Response<string>>
     {
         #region Fields
         private readonly IMapper _mapper;
@@ -49,6 +51,20 @@ namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
             }
 
             return UnprocessableEntity<string>(_sharedResources[SharedResourcesKeys.EmailIsExist]);
+
+        }
+
+        public async Task<Response<string>> Handle(EditUserCommand request, CancellationToken cancellationToken)
+        {
+            //check if USER is exsit or not 
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            // return not found 
+            if (user == null) return NotFound<string>();
+            var usermapper = _mapper.Map(request, user);
+            var result = await _userManager.UpdateAsync(usermapper);
+            if (result.Succeeded)
+                return Success<string>(_sharedResources[SharedResourcesKeys.Success]);
+            return BadRequest<string>();
 
         }
         #endregion
