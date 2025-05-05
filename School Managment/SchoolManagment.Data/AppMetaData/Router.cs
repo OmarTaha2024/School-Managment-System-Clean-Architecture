@@ -28,7 +28,9 @@
         {
             public const string prefix = Rule + "User";
             public const string GetByID = prefix + "/ID";
+            public const string Email = prefix + "/{email}";
             public const string Create = prefix + "/AddUser";
+            public const string paginated = prefix + "/GetUserspaginatedList";
 
 
         }

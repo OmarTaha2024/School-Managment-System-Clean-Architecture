@@ -321,7 +321,6 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll

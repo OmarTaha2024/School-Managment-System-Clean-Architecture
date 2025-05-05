@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\Authentication\**" />
+    <EmbeddedResource Remove="Features\Authentication\**" />
+    <None Remove="Features\Authentication\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SchoolManagment.Service\SchoolManagment.Service.csproj" />
   </ItemGroup>
 
@@ -20,11 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Authentication\Commands\Handlers\" />
-    <Folder Include="Features\Authentication\Commands\Validators\" />
-    <Folder Include="Features\Authentication\Queries\Handles\" />
-    <Folder Include="Features\Authentication\Queries\Models\" />
-    <Folder Include="Features\Authentication\Queries\Validators\" />
     <Folder Include="Features\Departments\Commands\" />
     <Folder Include="Mapping\Departments\CommandMapping\" />
   </ItemGroup>
