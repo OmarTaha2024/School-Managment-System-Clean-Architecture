@@ -132,6 +132,9 @@
   <data name="DepartmentID" xml:space="preserve">
     <value>رقم القسم</value>
   </data>
+  <data name="FaildToAddUser" xml:space="preserve">
+    <value>فشل في اضافه مستخدم جديد</value>
+  </data>
   <data name="IsExist" xml:space="preserve">
     <value>متواجد</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="NotFound" xml:space="preserve">
     <value>هذا المستخدم غير موجود</value>
+  </data>
+  <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
+    <value>خانه الرمز وخانه تأكيد الرمز غير متطابقان</value>
   </data>
   <data name="Required" xml:space="preserve">
     <value>هذا الحقل مطلوب</value>

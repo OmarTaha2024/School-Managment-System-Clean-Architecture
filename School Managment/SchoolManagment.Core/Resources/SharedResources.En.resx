@@ -129,6 +129,9 @@
   <data name="DepartmentID" xml:space="preserve">
     <value>Department Id</value>
   </data>
+  <data name="FaildToAddUser" xml:space="preserve">
+    <value>Faild To Add User</value>
+  </data>
   <data name="IsExist" xml:space="preserve">
     <value>Is Exist</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="NotFound" xml:space="preserve">
     <value>This User Not Found</value>
+  </data>
+  <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
+    <value>Password Not Equal ConfirmPass</value>
   </data>
   <data name="Required" xml:space="preserve">
     <value>This Field is Required</value>
