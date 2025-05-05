@@ -32,6 +32,8 @@
             public const string Create = prefix + "/AddUser";
             public const string paginated = prefix + "/GetUserspaginatedList";
             public const string Edit = prefix + "/Edituser";
+            public const string Delete = prefix + "/Deleteuser";
+            public const string ChangePassword = prefix + "/ChangePassword";
 
 
         }

@@ -11,7 +11,10 @@ namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
 {
     public class UserCommandHandler : ResponseHandler,
         IRequestHandler<AddUserCommand, Response<string>>,
-        IRequestHandler<EditUserCommand, Response<string>>
+        IRequestHandler<EditUserCommand, Response<string>>,
+        IRequestHandler<DeleteUserCommand, Response<string>>,
+        IRequestHandler<ChangeUserPasswordCommand, Response<string>>
+
     {
         #region Fields
         private readonly IMapper _mapper;
@@ -66,6 +69,31 @@ namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
                 return Success<string>(_sharedResources[SharedResourcesKeys.Success]);
             return BadRequest<string>();
 
+        }
+
+        public async Task<Response<string>> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
+        {
+            //check if USER is exsit or not 
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            // return not found 
+            if (user == null) return NotFound<string>();
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+                return Success<string>(_sharedResources[SharedResourcesKeys.Success]);
+            return BadRequest<string>();
+        }
+
+        public async Task<Response<string>> Handle(ChangeUserPasswordCommand request, CancellationToken cancellationToken)
+        {
+            //check if USER is exsit or not 
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            // return not found 
+            if (user == null) return NotFound<string>();
+            //Change User Password
+            var result = await _userManager.ChangePasswordAsync(user, request.CurrentPassword, request.NewPassword);
+            //result
+            if (!result.Succeeded) return BadRequest<string>(result.Errors.FirstOrDefault().Description);
+            return Success((string)_sharedResources[SharedResourcesKeys.Success]);
         }
         #endregion
 
