@@ -129,6 +129,9 @@
   <data name="DepartmentID" xml:space="preserve">
     <value>Department Id</value>
   </data>
+  <data name="EmailNotConfirmed" xml:space="preserve">
+    <value>Email Not Confirmed</value>
+  </data>
   <data name="FaildToAddUser" xml:space="preserve">
     <value>Faild To Add User</value>
   </data>
@@ -150,6 +153,9 @@
   <data name="NotFound" xml:space="preserve">
     <value>This User Not Found</value>
   </data>
+  <data name="PasswordNotCorrect" xml:space="preserve">
+    <value>Password Not Correct</value>
+  </data>
   <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
     <value>Password Not Equal ConfirmPass</value>
   </data>
@@ -164,5 +170,8 @@
   </data>
   <data name="UnprocessableEntity" xml:space="preserve">
     <value>Unprocessable Entity</value>
+  </data>
+  <data name="UserNameIsNotExist" xml:space="preserve">
+    <value>User Name Is Not Exist</value>
   </data>
 </root>

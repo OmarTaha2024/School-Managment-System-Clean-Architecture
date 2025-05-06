@@ -45,7 +45,7 @@ namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
                 // create successed
                 if (!createResult.Succeeded)
                 {
-                    return BadRequest<string>(_sharedResources[SharedResourcesKeys.FaildToAddUser]);
+                    return BadRequest<string>(createResult.Errors.FirstOrDefault().Description);
 
                 }
                 // create failed

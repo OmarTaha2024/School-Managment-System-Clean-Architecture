@@ -170,6 +170,10 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Humanizer.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -185,11 +189,16 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -202,6 +211,7 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -218,7 +228,9 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Memory.Data.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
@@ -283,6 +295,7 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\SchoolManagment.Core.dll
@@ -300,6 +313,7 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfoInputs.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfo.cs
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.CoreCompileInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.sourcelink.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\staticwebassets.build.json
@@ -316,14 +330,3 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.genruntimeconfig.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\ref\SchoolManagement.Api.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
