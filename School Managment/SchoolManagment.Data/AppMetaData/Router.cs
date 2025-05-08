@@ -37,6 +37,15 @@
 
 
         }
+        public static class Authentication
+        {
+            public const string prefix = Rule + "Authentication";
+            public const string SignIn = prefix + "/SignIn";
+            public const string RefreshToken = prefix + "/RefreshToken";
+            public const string ValidateToken = prefix + "/ValidateToken";
+
+
+        }
 
     }
 }

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlgorithmIsWrong" xml:space="preserve">
+    <value>الالجورزم المستخدم خاطئ</value>
+  </data>
   <data name="BadRequest" xml:space="preserve">
     <value>مشكله في الطلب </value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>رقم القسم</value>
+  </data>
+  <data name="EmailNotConfirmed" xml:space="preserve">
+    <value>لم يتم تأكيد الحساب </value>
   </data>
   <data name="FaildToAddUser" xml:space="preserve">
     <value>فشل في اضافه مستخدم جديد</value>
@@ -153,8 +159,17 @@
   <data name="NotFound" xml:space="preserve">
     <value>هذا المستخدم غير موجود</value>
   </data>
+  <data name="PasswordNotCorrect" xml:space="preserve">
+    <value>الرمز غير صحيح</value>
+  </data>
   <data name="PasswordNotEqualConfirmPass" xml:space="preserve">
     <value>خانه الرمز وخانه تأكيد الرمز غير متطابقان</value>
+  </data>
+  <data name="RefreshTokenIsExpired" xml:space="preserve">
+    <value>رمز التنشيط قد انتهت صلاحيته</value>
+  </data>
+  <data name="RefreshTokenIsNotFound" xml:space="preserve">
+    <value>لم يوجد رمز التنشيط</value>
   </data>
   <data name="Required" xml:space="preserve">
     <value>هذا الحقل مطلوب</value>
@@ -162,10 +177,16 @@
   <data name="Success" xml:space="preserve">
     <value>عمليه ناجحه</value>
   </data>
+  <data name="TokenIsNotExpired" xml:space="preserve">
+    <value>لم تنتهي صلاحيه الرمز</value>
+  </data>
   <data name="UnAuthorized" xml:space="preserve">
     <value>غير مصرح له بالدخول لتلك الصفحه</value>
   </data>
   <data name="UnprocessableEntity" xml:space="preserve">
     <value>لم يتم معالجه البيانات</value>
+  </data>
+  <data name="UserNameIsNotExist" xml:space="preserve">
+    <value>اسم المستخدم غير موجود</value>
   </data>
 </root>
