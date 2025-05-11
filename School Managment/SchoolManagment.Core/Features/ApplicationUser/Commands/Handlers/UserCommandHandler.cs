@@ -48,6 +48,7 @@ namespace SchoolManagment.Core.Features.ApplicationUser.Commands.Handlers
                     return BadRequest<string>(createResult.Errors.FirstOrDefault().Description);
 
                 }
+                await _userManager.AddToRoleAsync(Usermapper, "Admin");
                 // create failed
                 return Created<string>(_sharedResources[SharedResourcesKeys.Created]);
 

@@ -46,6 +46,14 @@
 
 
         }
+        public static class AuthorizationRouting
+        {
+            public const string prefix = Rule + "AuthorizationRouting/Role";
+            public const string Create = prefix + "/AddRole";
+            public const string Update = prefix + "/EditRole";
+
+
+        }
 
     }
 }

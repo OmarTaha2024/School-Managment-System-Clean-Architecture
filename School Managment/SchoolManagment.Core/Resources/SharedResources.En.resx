@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddFailed" xml:space="preserve">
+    <value>Add Failed</value>
+  </data>
   <data name="AlgorithmIsWrong" xml:space="preserve">
     <value>Algorithm Is Wrong</value>
   </data>
@@ -154,7 +157,7 @@
     <value>Must not be Empty</value>
   </data>
   <data name="NotFound" xml:space="preserve">
-    <value>This User Not Found</value>
+    <value>  Not Found</value>
   </data>
   <data name="PasswordNotCorrect" xml:space="preserve">
     <value>Password Not Correct</value>
@@ -182,6 +185,9 @@
   </data>
   <data name="UnprocessableEntity" xml:space="preserve">
     <value>Unprocessable Entity</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Updated  Successfully</value>
   </data>
   <data name="UserNameIsNotExist" xml:space="preserve">
     <value>User Name Is Not Exist</value>
