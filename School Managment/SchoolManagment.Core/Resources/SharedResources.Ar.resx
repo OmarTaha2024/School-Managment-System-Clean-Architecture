@@ -177,6 +177,9 @@
   <data name="Required" xml:space="preserve">
     <value>هذا الحقل مطلوب</value>
   </data>
+  <data name="RoleIsUsed" xml:space="preserve">
+    <value>هذا الدور مستخدم </value>
+  </data>
   <data name="Success" xml:space="preserve">
     <value>عمليه ناجحه</value>
   </data>

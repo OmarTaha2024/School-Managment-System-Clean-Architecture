@@ -9,7 +9,8 @@ namespace SchoolManagment.Core.Features.Authorization.Commands.Handler
 {
     public class RoleCommandHandler : ResponseHandler,
         IRequestHandler<AddRoleCommand, Response<string>>,
-        IRequestHandler<EditRoleCommand, Response<string>>
+        IRequestHandler<EditRoleCommand, Response<string>>,
+        IRequestHandler<DeleteRoleCommand, Response<string>>
     {
         #region Fields
         private readonly IStringLocalizer<SharedResources> _localizer;
@@ -36,6 +37,16 @@ namespace SchoolManagment.Core.Features.Authorization.Commands.Handler
             var result = await _authorizationService.EditRoleAsync(request);
             if (result == "Not Found") return NotFound<string>();
             else if (result == "Success") return Success((string)_localizer[SharedResourcesKeys.Updated]);
+            else
+                return BadRequest<string>(result);
+        }
+
+        public async Task<Response<string>> Handle(DeleteRoleCommand request, CancellationToken cancellationToken)
+        {
+            var result = await _authorizationService.DeleteRoleAsync(request.Name);
+            if (result == "Not Found") return NotFound<string>();
+            if (result == "Used") return UnprocessableEntity<string>(_localizer[SharedResourcesKeys.RoleIsUsed]);
+            else if (result == "Success") return Deleted<string>(_localizer[SharedResourcesKeys.Deleted]);
             else
                 return BadRequest<string>(result);
         }
