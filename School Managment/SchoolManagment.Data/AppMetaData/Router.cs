@@ -52,6 +52,7 @@
             public const string Create = prefix + "/AddRole";
             public const string Update = prefix + "/EditRole";
             public const string Delete = prefix + "/DeleteRole";
+            public const string RoleList = prefix + "/RoleList";
 
 
         }

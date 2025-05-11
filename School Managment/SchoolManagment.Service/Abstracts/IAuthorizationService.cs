@@ -1,4 +1,5 @@
-﻿using SchoolManagment.Data.Requests;
+﻿using Microsoft.AspNetCore.Identity;
+using SchoolManagment.Data.Requests;
 
 namespace SchoolManagment.Service.Abstracts
 {
@@ -8,5 +9,6 @@ namespace SchoolManagment.Service.Abstracts
         public Task<string> DeleteRoleAsync(string roleName);
         public Task<bool> IsRoleExistByName(string roleName);
         public Task<string> EditRoleAsync(EditRoleRequest editRoleRequest);
+        public Task<List<IdentityRole>> GetRolesList();
     }
 }

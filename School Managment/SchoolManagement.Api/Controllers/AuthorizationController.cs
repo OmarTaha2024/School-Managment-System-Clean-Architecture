@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SchoolManagement.Api.Base;
 using SchoolManagment.Core.Features.Authorization.Commands.Models;
+using SchoolManagment.Core.Features.Authorization.Quaries.Models;
 using SchoolManagment.Data.AppMetaData;
 
 namespace SchoolManagement.Api.Controllers
@@ -8,6 +9,13 @@ namespace SchoolManagement.Api.Controllers
     [ApiController]
     public class AuthorizationController : AppControllerBase
     {
+
+        [HttpGet(Router.AuthorizationRouting.RoleList)]
+        public async Task<IActionResult> RoleList()
+        {
+            var response = await Mediator.Send(new GetRolesListQuery());
+            return NewResult(response);
+        }
         [HttpPost(Router.AuthorizationRouting.Create)]
         public async Task<IActionResult> AddRole([FromForm] AddRoleCommand command)
         {

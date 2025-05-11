@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities.Identity;
 using SchoolManagment.Data.Requests;
 using SchoolManagment.Service.Abstracts;
@@ -65,6 +66,12 @@ namespace SchoolManagment.Service.Services
 
         }
 
+        public async Task<List<IdentityRole>> GetRolesList()
+        {
+            var roles = await _role.Roles.ToListAsync();
+            return roles;
+        }
+
         public async Task<bool> IsRoleExistByName(string roleName)
         {
             var result = await _role.RoleExistsAsync(roleName);
@@ -74,5 +81,7 @@ namespace SchoolManagment.Service.Services
             }
             return false;
         }
+
+
     }
 }
