@@ -3,6 +3,7 @@ using SchoolManagement.Api.Base;
 using SchoolManagment.Core.Features.Authorization.Commands.Models;
 using SchoolManagment.Core.Features.Authorization.Quaries.Models;
 using SchoolManagment.Data.AppMetaData;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace SchoolManagement.Api.Controllers
 {
@@ -14,6 +15,13 @@ namespace SchoolManagement.Api.Controllers
         public async Task<IActionResult> RoleList()
         {
             var response = await Mediator.Send(new GetRolesListQuery());
+            return NewResult(response);
+        }
+        [SwaggerOperation(Summary = " ادارة صلاحيات المستخدمين", OperationId = "ManageUserRoles")]
+        [HttpGet(Router.AuthorizationRouting.ManageUserRoles)]
+        public async Task<IActionResult> ManageUserRoles([FromRoute] string userId)
+        {
+            var response = await Mediator.Send(new ManageUserRolesQuery() { UserId = userId });
             return NewResult(response);
         }
         [HttpPost(Router.AuthorizationRouting.Create)]

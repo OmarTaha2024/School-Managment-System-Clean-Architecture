@@ -192,6 +192,9 @@
   <data name="Updated" xml:space="preserve">
     <value>Updated  Successfully</value>
   </data>
+  <data name="UserIsNotFound" xml:space="preserve">
+    <value>User Is Not Found</value>
+  </data>
   <data name="UserNameIsNotExist" xml:space="preserve">
     <value>User Name Is Not Exist</value>
   </data>

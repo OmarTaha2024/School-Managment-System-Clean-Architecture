@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities.Identity;
 using SchoolManagment.Data.Requests;
+using SchoolManagment.Data.Results;
 using SchoolManagment.Service.Abstracts;
 
 namespace SchoolManagment.Service.Services
@@ -15,15 +16,17 @@ namespace SchoolManagment.Service.Services
         #endregion
         #region ctor
         public AuthorizationService(
-       RoleManager<IdentityRole> role)
+       RoleManager<IdentityRole> role, UserManager<User> user)
         {
             _role = role;
+            _user = user;
         }
 
         #endregion
 
         public async Task<string> AddRoleAsync(string roleName)
         {
+
             var identityRole = new IdentityRole();
             identityRole.Name = roleName;
             var result = await _role.CreateAsync(identityRole);
@@ -82,6 +85,31 @@ namespace SchoolManagment.Service.Services
             return false;
         }
 
-
+        public async Task<ManageUserRolesResult> ManageUserRolesData(User user)
+        {
+            var response = new ManageUserRolesResult();
+            var rolesList = new List<UserRoles>();
+            //Roles
+            var roles = await _role.Roles.ToListAsync();
+            response.UserId = user.Id;
+            foreach (var role in roles)
+            {
+                var userrole = new UserRoles();
+                userrole.Id = role.Id;
+                userrole.Name = role.Name;
+                var result = await _user.IsInRoleAsync(user, role.Name);
+                if (result)
+                {
+                    userrole.HasRole = true;
+                }
+                else
+                {
+                    userrole.HasRole = false;
+                }
+                rolesList.Add(userrole);
+            }
+            response.userRoles = rolesList;
+            return response;
+        }
     }
 }

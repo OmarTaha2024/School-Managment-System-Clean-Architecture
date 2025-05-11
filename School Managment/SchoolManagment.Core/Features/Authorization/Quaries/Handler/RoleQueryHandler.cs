@@ -7,12 +7,14 @@ using SchoolManagment.Core.Features.Authorization.Quaries.Models;
 using SchoolManagment.Core.Features.Authorization.Quaries.Results;
 using SchoolManagment.Core.Resources;
 using SchoolManagment.Data.Entities.Identity;
+using SchoolManagment.Data.Results;
 using SchoolManagment.Service.Abstracts;
 
 namespace SchoolManagment.Core.Features.Authorization.Quaries.Handler
 {
     public class RoleQueryHandler : ResponseHandler,
-       IRequestHandler<GetRolesListQuery, Response<List<GetRolesListResult>>>
+       IRequestHandler<GetRolesListQuery, Response<List<GetRolesListResult>>>,
+       IRequestHandler<ManageUserRolesQuery, Response<ManageUserRolesResult>>
     {
         #region Fields
         private readonly IAuthorizationService _authorizationService;
@@ -34,6 +36,14 @@ namespace SchoolManagment.Core.Features.Authorization.Quaries.Handler
         {
             var roles = await _authorizationService.GetRolesList();
             var result = _mapper.Map<List<GetRolesListResult>>(roles);
+            return Success(result);
+        }
+
+        public async Task<Response<ManageUserRolesResult>> Handle(ManageUserRolesQuery request, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.FindByIdAsync(request.UserId.ToString());
+            if (user == null) return NotFound<ManageUserRolesResult>(_stringLocalizer[SharedResourcesKeys.UserIsNotFound]);
+            var result = await _authorizationService.ManageUserRolesData(user);
             return Success(result);
         }
         #endregion

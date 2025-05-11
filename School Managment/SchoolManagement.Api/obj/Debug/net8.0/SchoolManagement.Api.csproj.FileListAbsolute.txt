@@ -329,4 +329,3 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.genruntimeconfig.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\ref\SchoolManagement.Api.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cs
