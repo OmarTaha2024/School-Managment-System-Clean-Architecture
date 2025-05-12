@@ -41,7 +41,7 @@ namespace SchoolManagment.Core.Features.Authorization.Quaries.Handler
 
         public async Task<Response<ManageUserRolesResult>> Handle(ManageUserRolesQuery request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.FindByIdAsync(request.UserId.ToString());
+            var user = await _userManager.FindByIdAsync(request.UserId);
             if (user == null) return NotFound<ManageUserRolesResult>(_stringLocalizer[SharedResourcesKeys.UserIsNotFound]);
             var result = await _authorizationService.ManageUserRolesData(user);
             return Success(result);

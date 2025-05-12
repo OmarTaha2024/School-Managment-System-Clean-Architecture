@@ -154,6 +154,13 @@ D:\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.dll
 D:\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\School Managment\SchoolManagement.Api\bin\Debug\net8.0\AutoMapper.dll
 D:\School Managment\SchoolManagement.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.AssemblyReference.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfoInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfo.cs
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.CoreCompileInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.sourcelink.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\appsettings.Development.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\appsettings.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\SchoolManagement.Api.exe
@@ -308,13 +315,6 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\SchoolManagment.Service.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Ar\SchoolManagment.Core.resources.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\En\SchoolManagment.Core.resources.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.AssemblyReference.cache
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.GeneratedMSBuildEditorConfig.editorconfig
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfoInputs.cache
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfo.cs
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.CoreCompileInputs.cache
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.sourcelink.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\staticwebassets.development.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\staticwebassets\msbuild.SchoolManagement.Api.Microsoft.AspNetCore.StaticWebAssets.props

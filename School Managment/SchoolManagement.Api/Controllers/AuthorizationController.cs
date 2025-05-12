@@ -24,6 +24,13 @@ namespace SchoolManagement.Api.Controllers
             var response = await Mediator.Send(new ManageUserRolesQuery() { UserId = userId });
             return NewResult(response);
         }
+        [SwaggerOperation(Summary = " ادارة صلاحيات الاستخدام المستخدمين", OperationId = "ManageUserclaims")]
+        [HttpGet(Router.AuthorizationRouting.ManageUserclaims)]
+        public async Task<IActionResult> ManageUserclaimsResult([FromRoute] string userId)
+        {
+            var response = await Mediator.Send(new ManageUserClaimsQuery() { UserID = userId });
+            return NewResult(response);
+        }
         [HttpPost(Router.AuthorizationRouting.Create)]
         public async Task<IActionResult> AddRole([FromForm] AddRoleCommand command)
         {

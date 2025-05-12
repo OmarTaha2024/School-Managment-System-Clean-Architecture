@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities.Identity;
+using SchoolManagment.Data.Helpers;
 using SchoolManagment.Data.Requests;
 using SchoolManagment.Data.Results;
 using SchoolManagment.Infrustructure.Context;
@@ -86,6 +87,32 @@ namespace SchoolManagment.Service.Services
                 return true;
             }
             return false;
+        }
+
+        public async Task<ManageUserclaimsResult> ManageUserClaimData(User user)
+        {
+            var response = new ManageUserclaimsResult();
+            var usercliamsList = new List<UserClaims>();
+            response.UserId = user.Id;
+
+            var userClaims = await _user.GetClaimsAsync(user);
+
+            foreach (var claim in ClaimsStore.claims)
+            {
+                var userclaim = new UserClaims();
+                userclaim.Type = claim.Type;
+                if (userClaims.Any(x => x.Type == claim.Type))
+                {
+                    userclaim.Value = true;
+                }
+                else
+                {
+                    userclaim.Value = false;
+                }
+                usercliamsList.Add(userclaim);
+            }
+            response.userClaims = usercliamsList;
+            return response;
         }
 
         public async Task<ManageUserRolesResult> ManageUserRolesData(User user)
