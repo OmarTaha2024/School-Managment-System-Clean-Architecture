@@ -144,6 +144,15 @@
   <data name="FaildToAddUser" xml:space="preserve">
     <value>فشل في اضافه مستخدم جديد</value>
   </data>
+  <data name="FailedToAddNewRoles" xml:space="preserve">
+    <value>فشل في اضافه ادوار جديده</value>
+  </data>
+  <data name="FailedToRemoveOldRoles" xml:space="preserve">
+    <value>فشل في حذف الادوار القديمه</value>
+  </data>
+  <data name="FailedToUpdateUserRoles" xml:space="preserve">
+    <value>فشل في تديث الادوار الخاصه بهذا المستخدم</value>
+  </data>
   <data name="IsExist" xml:space="preserve">
     <value>متواجد</value>
   </data>
