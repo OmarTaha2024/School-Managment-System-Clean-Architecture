@@ -6,6 +6,7 @@ using SchoolManagment.Data.Requests;
 using SchoolManagment.Data.Results;
 using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Service.Abstracts;
+using System.Security.Claims;
 
 namespace SchoolManagment.Service.Services
 {
@@ -140,6 +141,38 @@ namespace SchoolManagment.Service.Services
             }
             response.userRoles = rolesList;
             return response;
+        }
+
+        public async Task<string> UpdateUserClaims(UpdateUserClaimsRequest request)
+        {
+            var transact = await _dbContext.Database.BeginTransactionAsync();
+            try
+            {
+                //Get User
+                var user = await _user.FindByIdAsync(request.UserId.ToString());
+                if (user == null)
+                {
+                    return "UserIsNull";
+                }
+                //get user Old Roles
+                var userClaims = await _user.GetClaimsAsync(user);
+                //Delete OldRoles
+                var removeResult = await _user.RemoveClaimsAsync(user, userClaims);
+                if (!removeResult.Succeeded)
+                    return "FailedToRemoveOldRoles";
+                var selectedClaims = request.userClaims.Where(x => x.Value == true).Select(x => new Claim(x.Type, x.Value.ToString())); ;
+                var addCalimssresult = await _user.AddClaimsAsync(user, selectedClaims);
+                if (!addCalimssresult.Succeeded)
+                    return "FailedToAddNewRoles";
+                await transact.CommitAsync();
+                //return Result
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                await transact.RollbackAsync();
+                return "FailedToUpdateUserRoles";
+            }
         }
 
         public async Task<string> UpdateUserRoles(UpdateUserRolesRequest request)

@@ -55,6 +55,7 @@
             public const string RoleList = prefix + "/RoleList";
             public const string ManageUserRoles = prefix + "/ManageUserRoles/{userId}";
             public const string UpdateUserRoles = prefix + "/UpdateUserRoles";
+            public const string UpdateUserClaims = prefix + "/UpdateUserClaims";
             public const string ManageUserclaims = prefix + "/ManageUserclaims/{userId}";
 
 

@@ -55,5 +55,11 @@ namespace SchoolManagement.Api.Controllers
             var response = await Mediator.Send(command);
             return NewResult(response);
         }
+        [HttpPut(Router.AuthorizationRouting.UpdateUserClaims)]
+        public async Task<IActionResult> UpdateUserClaims([FromBody] UpdateUserClaimsCommand command)
+        {
+            var response = await Mediator.Send(command);
+            return NewResult(response);
+        }
     }
 }

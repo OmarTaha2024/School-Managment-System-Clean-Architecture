@@ -144,11 +144,20 @@
   <data name="FaildToAddUser" xml:space="preserve">
     <value>فشل في اضافه مستخدم جديد</value>
   </data>
+  <data name="FailedToAddNewClaims" xml:space="preserve">
+    <value>فشل في اضافه صلاحيات جديده</value>
+  </data>
   <data name="FailedToAddNewRoles" xml:space="preserve">
     <value>فشل في اضافه ادوار جديده</value>
   </data>
+  <data name="FailedToRemoveOldClaims" xml:space="preserve">
+    <value>فشل في مسح الصلاحيات القديمه</value>
+  </data>
   <data name="FailedToRemoveOldRoles" xml:space="preserve">
     <value>فشل في حذف الادوار القديمه</value>
+  </data>
+  <data name="FailedToUpdateClaims" xml:space="preserve">
+    <value>فشل في تحديث صلاحيات هذا المستخدم</value>
   </data>
   <data name="FailedToUpdateUserRoles" xml:space="preserve">
     <value>فشل في تديث الادوار الخاصه بهذا المستخدم</value>
