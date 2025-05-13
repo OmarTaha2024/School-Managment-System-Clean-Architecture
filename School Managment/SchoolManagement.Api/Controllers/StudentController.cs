@@ -8,7 +8,7 @@ using SchoolManagment.Data.AppMetaData;
 namespace SchoolManagement.Api.Controllers
 {
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "admin")]
     public class StudentController : AppControllerBase
     {
         #region API
@@ -31,8 +31,8 @@ namespace SchoolManagement.Api.Controllers
             var responce = await Mediator.Send(new GetStudentByIDQuery(id));
             return NewResult(responce);
         }
+        [Authorize(Policy = "CreateStudent")]
         [HttpPost(Router.StudentRouting.Create)]
-
         public async Task<IActionResult> AddStudent([FromBody] AddStudentCommand _command)
         {
             var responce = await Mediator.Send(_command);
