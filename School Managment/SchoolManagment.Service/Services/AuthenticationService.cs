@@ -33,7 +33,7 @@ namespace SchoolManagment.Service.Services
         #region Actions
         public async Task<JwtAuthResult> GetJWTToken(User user)
         {
-            var (JWTToken, AccessToken) = GenerateJWTToken(user);
+            var (JWTToken, AccessToken) = await GenerateJWTToken(user);
 
             var refreshToken = GetRefreshToken(user.UserName);
             var userRefreshToken = new UserRefreshToken
@@ -72,24 +72,32 @@ namespace SchoolManagment.Service.Services
             randomNumberGenerate.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
         }
-        public List<Claim> GetClaims(User user)
+        public async Task<List<Claim>> GetClaims(User user)
         {
+            var roles = await _userManager.GetRolesAsync(user);
             var claims = new List<Claim>()
             {
-                new Claim(nameof(UserClaimModel.UserName),user.UserName),
-                new Claim(nameof(UserClaimModel.Email),user.Email),
+                new Claim(ClaimTypes.Name,user.UserName),
+                new Claim(ClaimTypes.NameIdentifier,user.UserName),
+                new Claim(ClaimTypes.Email,user.Email),
                 new Claim(nameof(UserClaimModel.PhoneNumber), user.PhoneNumber),
             };
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            var userClaims = await _userManager.GetClaimsAsync(user);
+            claims.AddRange(userClaims);
             return claims;
         }
-        private (JwtSecurityToken, string) GenerateJWTToken(User user)
+        private async Task<(JwtSecurityToken, string)> GenerateJWTToken(User user)
         {
-            var claims = GetClaims(user);
+            var claims = await GetClaims(user);
             var jwtToken = new JwtSecurityToken(
                 _jwtSettings.Issuer,
                 _jwtSettings.Audience,
                 claims,
-                expires: DateTime.Now.AddMinutes(_jwtSettings.AccessTokenExpireDate),
+                expires: DateTime.Now.AddDays(_jwtSettings.AccessTokenExpireDate),
                 signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtSettings.Secret)), SecurityAlgorithms.HmacSha256Signature));
             var accessToken = new JwtSecurityTokenHandler().WriteToken(jwtToken);
             return (jwtToken, accessToken);
@@ -136,7 +144,7 @@ namespace SchoolManagment.Service.Services
 
         public async Task<JwtAuthResult> GetRefreshToken(User user, JwtSecurityToken jwtToken, DateTime? expiryDate, string refreshToken)
         {
-            var (jwtSecurityToken, newToken) = GenerateJWTToken(user);
+            var (jwtSecurityToken, newToken) = await GenerateJWTToken(user);
             var response = new JwtAuthResult();
             response.AccessToken = newToken;
             var refreshTokenResult = new RefreshToken();
