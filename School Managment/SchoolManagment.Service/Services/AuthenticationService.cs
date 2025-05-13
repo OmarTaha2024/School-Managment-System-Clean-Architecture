@@ -75,6 +75,7 @@ namespace SchoolManagment.Service.Services
         public async Task<List<Claim>> GetClaims(User user)
         {
             var roles = await _userManager.GetRolesAsync(user);
+            var userclaims = await _userManager.GetClaimsAsync(user);
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name,user.UserName),
@@ -86,8 +87,7 @@ namespace SchoolManagment.Service.Services
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
-            var userClaims = await _userManager.GetClaimsAsync(user);
-            claims.AddRange(userClaims);
+            claims.AddRange(userclaims);
             return claims;
         }
         private async Task<(JwtSecurityToken, string)> GenerateJWTToken(User user)

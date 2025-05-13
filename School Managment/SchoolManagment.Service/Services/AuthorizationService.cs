@@ -128,8 +128,7 @@ namespace SchoolManagment.Service.Services
                 var userrole = new UserRoles();
                 userrole.Id = role.Id;
                 userrole.Name = role.Name;
-                var result = await _user.IsInRoleAsync(user, role.Name);
-                if (result)
+                if (await _user.IsInRoleAsync(user, role.Name))
                 {
                     userrole.HasRole = true;
                 }
