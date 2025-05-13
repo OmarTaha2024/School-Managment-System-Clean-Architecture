@@ -40,9 +40,12 @@ namespace SchoolManagment.Infrustructure
             //JWT Authentication
 
             var jwtSettings = new JwtSettings();
+            var EmailSetting = new EmailSettings();
             configuration.GetSection(nameof(jwtSettings)).Bind(jwtSettings);
+            configuration.GetSection("emailSettings").Bind(EmailSetting);
 
             services.AddSingleton(jwtSettings);
+            services.AddSingleton(EmailSetting);
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

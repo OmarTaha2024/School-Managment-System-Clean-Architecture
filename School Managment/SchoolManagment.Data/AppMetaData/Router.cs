@@ -60,6 +60,13 @@
 
 
         }
+        public static class EmailsRoute
+        {
+            public const string prefix = Rule + "EmailsRoute";
+            public const string SendEmail = prefix + "/SendEmail";
+
+
+        }
 
     }
 }
