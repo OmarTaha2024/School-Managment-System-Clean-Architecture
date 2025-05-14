@@ -165,9 +165,11 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Azure.Core.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Azure.Identity.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\FluentValidation.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Humanizer.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MailKit.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -210,6 +212,7 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MimeKit.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -313,6 +316,7 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfoInputs.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.AssemblyInfo.cs
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.csproj.CoreCompileInputs.cache
+D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.sourcelink.json
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\staticwebassets.build.json
@@ -329,7 +333,3 @@ D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.pdb
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.genruntimeconfig.cache
 D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\ref\SchoolManagement.Api.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MailKit.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\bin\Debug\net8.0\MimeKit.dll
-D:\School-Managment-System-Clean-Architecture\School Managment\SchoolManagement.Api\obj\Debug\net8.0\SchoolManagement.Api.MvcApplicationPartsAssemblyInfo.cs

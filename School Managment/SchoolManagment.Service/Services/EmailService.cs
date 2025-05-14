@@ -19,7 +19,7 @@ namespace SchoolManagment.Service.Services
         #endregion
         #region Handle Function
 
-        public async Task<string> SendEmailAsync(string email, string msg)
+        public async Task<string> SendEmailAsync(string email, string msg, string? reason)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace SchoolManagment.Service.Services
                     };
                     message.From.Add(new MailboxAddress("Tahtoh", _emailSettings.FromEmail));
                     message.To.Add(new MailboxAddress("testing", email));
-                    message.Subject = "New Submet data";
+                    message.Subject = reason == null ? "Submitted" : reason; ;
                     await client.SendAsync(message);
                     await client.DisconnectAsync(true);
                 }
@@ -52,6 +52,8 @@ namespace SchoolManagment.Service.Services
             }
 
         }
+
+
         #endregion
 
     }

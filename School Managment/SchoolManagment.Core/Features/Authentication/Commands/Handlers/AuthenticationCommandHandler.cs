@@ -47,8 +47,10 @@ namespace SchoolManagment.Core.Features.Authentication.Commands.Handlers
             var user = await _userManager.FindByNameAsync(request.UserName);
             //Return The UserName Not Found
             if (user == null) return BadRequest<JwtAuthResult>(_stringLocalizer[SharedResourcesKeys.UserNameIsNotExist]);
+
             //try To Sign in 
             var signInResult = _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
+            if (!user.EmailConfirmed) return BadRequest<JwtAuthResult>(_stringLocalizer[SharedResourcesKeys.EmailNotConfirmed]);
             //if Failed Return Passord is wrong
             if (!signInResult.IsCompletedSuccessfully) return BadRequest<JwtAuthResult>(_stringLocalizer[SharedResourcesKeys.PasswordNotCorrect]);
 

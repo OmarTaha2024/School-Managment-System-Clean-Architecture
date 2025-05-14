@@ -43,6 +43,7 @@
             public const string SignIn = prefix + "/SignIn";
             public const string RefreshToken = prefix + "/RefreshToken";
             public const string ValidateToken = prefix + "/ValidateToken";
+            public const string ConfirmEmail = prefix + "/Api/Authentication/ConfirmEmail";
 
 
         }
@@ -56,7 +57,7 @@
             public const string ManageUserRoles = prefix + "/ManageUserRoles/{userId}";
             public const string UpdateUserRoles = prefix + "/UpdateUserRoles";
             public const string UpdateUserClaims = prefix + "/UpdateUserClaims";
-            public const string ManageUserclaims = prefix + "/ManageUserclaims/{userId}";
+            public const string ManageUserclaims = "/ManageUserclaims/{userId}";
 
 
         }
