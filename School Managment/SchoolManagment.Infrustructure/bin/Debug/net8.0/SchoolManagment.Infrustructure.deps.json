@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "SchoolManagment.Infrustructure/1.0.0": {
         "dependencies": {
+          "EntityFrameworkCore.EncryptColumn": "6.0.8",
+          "EntityFrameworkCore.JamieEncryptColumn": "8.0.69",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.11",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.Design": "8.0.11",
@@ -53,6 +55,22 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "EntityFrameworkCore.EncryptColumn/6.0.8": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.11"
+        }
+      },
+      "EntityFrameworkCore.JamieEncryptColumn/8.0.69": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.11"
+        },
+        "runtime": {
+          "lib/netcoreapp8.0/EntityFrameworkCore.EncryptColumn.dll": {
+            "assemblyVersion": "8.0.69.0",
+            "fileVersion": "8.0.69.0"
           }
         }
       },
@@ -1204,6 +1222,7 @@
       },
       "SchoolManagment.Data/1.0.0": {
         "dependencies": {
+          "EntityFrameworkCore.EncryptColumn": "6.0.8",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11"
         },
@@ -1232,6 +1251,20 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "EntityFrameworkCore.EncryptColumn/6.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AgnhI+4ZM0lySJKR4cEWvDe/EtGL9nIF3jAMz9XikAyMdbEknDTlj0ksSdLwq7OVXMh/ZsR0IuRHNkcnfXkGzQ==",
+      "path": "entityframeworkcore.encryptcolumn/6.0.8",
+      "hashPath": "entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512"
+    },
+    "EntityFrameworkCore.JamieEncryptColumn/8.0.69": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sGq8LSHzdzLcg9hWotvn/ewnrl11TqY274snQ4MI8iLSHE+WfQUdDetgYeGxAgOL4owttxBtrPoeIbl/wKkhEA==",
+      "path": "entityframeworkcore.jamieencryptcolumn/8.0.69",
+      "hashPath": "entityframeworkcore.jamieencryptcolumn.8.0.69.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

@@ -138,6 +138,9 @@
   <data name="DepartmentID" xml:space="preserve">
     <value>رقم القسم</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>الايميل</value>
+  </data>
   <data name="EmailNotConfirmed" xml:space="preserve">
     <value>لم يتم تأكيد الحساب </value>
   </data>
@@ -162,6 +165,9 @@
   <data name="FailedToUpdateUserRoles" xml:space="preserve">
     <value>فشل في تديث الادوار الخاصه بهذا المستخدم</value>
   </data>
+  <data name="InvaildCode" xml:space="preserve">
+    <value>رمز غير صحيح</value>
+  </data>
   <data name="IsExist" xml:space="preserve">
     <value>متواجد</value>
   </data>
@@ -170,6 +176,9 @@
   </data>
   <data name="MaxLengthis10" xml:space="preserve">
     <value>لا يتجاوز عشر حروف</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>الرساله</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
@@ -197,6 +206,15 @@
   </data>
   <data name="RoleIsUsed" xml:space="preserve">
     <value>هذا الدور مستخدم </value>
+  </data>
+  <data name="SendEmailFailed" xml:space="preserve">
+    <value>فشل ارسال الايميل</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>حاول مره اخري في وقت لاحق</value>
   </data>
   <data name="Success" xml:space="preserve">
     <value>عمليه ناجحه</value>

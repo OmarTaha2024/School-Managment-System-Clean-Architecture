@@ -135,6 +135,9 @@
   <data name="DepartmentID" xml:space="preserve">
     <value>Department Id</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
   <data name="EmailNotConfirmed" xml:space="preserve">
     <value>Email Not Confirmed</value>
   </data>
@@ -159,6 +162,9 @@
   <data name="FailedToUpdateUserRoles" xml:space="preserve">
     <value>Failed To Update User Roles</value>
   </data>
+  <data name="InvaildCode" xml:space="preserve">
+    <value>Invaild Code</value>
+  </data>
   <data name="IsExist" xml:space="preserve">
     <value>Is Exist</value>
   </data>
@@ -167,6 +173,9 @@
   </data>
   <data name="MaxLengthis10" xml:space="preserve">
     <value>Must be less than or equal 10 character</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>Message</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
@@ -195,11 +204,17 @@
   <data name="RoleIsUsed" xml:space="preserve">
     <value>Role Is Used</value>
   </data>
+  <data name="SendEmailFailed" xml:space="preserve">
+    <value>Send Email Failed</value>
+  </data>
   <data name="Success" xml:space="preserve">
     <value>Success</value>
   </data>
   <data name="TokenIsNotExpired" xml:space="preserve">
     <value>Token Is Not Expired</value>
+  </data>
+  <data name="TryAgainInAnotherTime" xml:space="preserve">
+    <value>Try Again In Another Time</value>
   </data>
   <data name="UnAuthorized" xml:space="preserve">
     <value>UnAuthorized</value>

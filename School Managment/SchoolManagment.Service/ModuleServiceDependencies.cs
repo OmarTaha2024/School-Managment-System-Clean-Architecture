@@ -14,6 +14,8 @@ namespace SchoolManagment.Service
             services.AddTransient<IDepartmentService, DepartmentService>();
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<IAuthorizationService, AuthorizationService>();
+            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IApplicationUserService, ApplicationUserService>();
             services.AddSingleton<ConcurrentDictionary<string, RefreshToken>>();
 
             return services;

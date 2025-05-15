@@ -45,7 +45,7 @@
         public const string FailedToAddNewClaims = "FailedToAddNewClaims";
         public const string FailedToRemoveOldClaims = "FailedToRemoveOldClaims";
         public const string Email = "Email";
-        public const string Message = "Message";
+        public const string Msg = "Msg";
         public const string SendEmailFailed = "SendEmailFailed";
         public const string EmailNotConfirmed = "EmailNotConfirmed";
         public const string TryToRegisterAgain = "TryToRegisterAgain";

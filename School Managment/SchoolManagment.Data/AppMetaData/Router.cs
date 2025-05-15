@@ -43,6 +43,10 @@
             public const string SignIn = prefix + "/SignIn";
             public const string RefreshToken = prefix + "/RefreshToken";
             public const string ValidateToken = prefix + "/ValidateToken";
+            public const string SendResetPasswordCode = prefix + "/SendResetPasswordCode";
+            public const string ResetPassword = prefix + "/ResetPassword";
+            public const string ConfirmResetPassward = prefix + "/ConfirmResetPassward";
+            public const string ConfirmEmail = prefix + "/Api/Authentication/ConfirmEmail";
 
 
         }
@@ -56,7 +60,14 @@
             public const string ManageUserRoles = prefix + "/ManageUserRoles/{userId}";
             public const string UpdateUserRoles = prefix + "/UpdateUserRoles";
             public const string UpdateUserClaims = prefix + "/UpdateUserClaims";
-            public const string ManageUserclaims = prefix + "/ManageUserclaims/{userId}";
+            public const string ManageUserclaims = "/ManageUserclaims/{userId}";
+
+
+        }
+        public static class EmailsRoute
+        {
+            public const string prefix = Rule + "EmailsRoute";
+            public const string SendEmail = prefix + "/SendEmail";
 
 
         }
