@@ -1366,7 +1366,6 @@
       },
       "SchoolManagment.Service/1.0.0": {
         "dependencies": {
-          "EntityFrameworkCore.EncryptColumn": "6.0.8",
           "MailKit": "4.12.0",
           "SchoolManagment.Infrustructure": "1.0.0"
         },

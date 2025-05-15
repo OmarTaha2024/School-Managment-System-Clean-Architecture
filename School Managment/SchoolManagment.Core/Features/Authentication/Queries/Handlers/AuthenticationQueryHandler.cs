@@ -10,8 +10,7 @@ namespace SchoolManagment.Core.Features.Authentication.Queries.Handlers
     public class AuthenticationQueryHandler : ResponseHandler,
           IRequestHandler<AuthorizeUserQuery, Response<string>>,
           IRequestHandler<ConfirmEmailQuery, Response<string>>,
-          IRequestHandler<ConfirmResetPasswordQuery, Response<string>>,
-          IRequestHandler<ResetPasswordQuery, Response<string>>
+          IRequestHandler<ConfirmResetPasswordQuery, Response<string>>
     {
         #region Fields
         private readonly IStringLocalizer<SharedResources> _stringLocalizer;
@@ -61,11 +60,7 @@ namespace SchoolManagment.Core.Features.Authentication.Queries.Handlers
             }
         }
 
-        public Task<Response<string>> Handle(ResetPasswordQuery request, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
 
-        }
         #endregion
 
     }

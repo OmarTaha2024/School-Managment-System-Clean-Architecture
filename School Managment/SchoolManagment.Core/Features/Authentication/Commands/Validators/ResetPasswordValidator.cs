@@ -27,6 +27,13 @@ namespace SchoolManagment.Core.Features.Authentication.Commands.Validators
                  .NotEmpty().WithMessage(_localizer[SharedResourcesKeys.NotEmpty])
                  .NotNull().WithMessage(_localizer[SharedResourcesKeys.Required]);
 
+            RuleFor(x => x.Password)
+                 .NotEmpty().WithMessage(_localizer[SharedResourcesKeys.NotEmpty])
+                 .NotNull().WithMessage(_localizer[SharedResourcesKeys.Required]);
+
+            RuleFor(x => x.ConfirmPassword)
+                 .Equal(x => x.Password).WithMessage(_localizer[SharedResourcesKeys.PasswordNotEqualConfirmPass]);
+
         }
 
         public void ApplyCustomValidationsRules()

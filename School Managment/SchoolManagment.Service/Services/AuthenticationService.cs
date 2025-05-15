@@ -1,5 +1,4 @@
-﻿using EntityFrameworkCore.EncryptColumn.Interfaces;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using SchoolManagment.Data.Entities.Identity;
 using SchoolManagment.Data.Helpers;
@@ -25,7 +24,7 @@ namespace SchoolManagment.Service.Services
         private readonly ApplicationDbContext _applicationDbContext;
         #endregion
         #region  Ctor
-        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken, IEmailService emailService, ApplicationDbContext applicationDbContext, IEncryptionProvider encryptionProvider)
+        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken, IEmailService emailService, ApplicationDbContext applicationDbContext)
         {
             _jwtSettings = jwtSettings;
             //_userRefreshToken = userRefreshToken;
@@ -33,7 +32,6 @@ namespace SchoolManagment.Service.Services
             _userManager = userManager;
             _emailService = emailService;
             _applicationDbContext = applicationDbContext;
-            _encryptionProvider = encryptionProvider;
         }
         #endregion
         #region Actions
@@ -240,6 +238,25 @@ namespace SchoolManagment.Service.Services
             var usercode = user.code;
             if (usercode == code) return "Success";
             return "Failed";
+        }
+
+        public async Task<string> ResetPassword(string Email, string Password)
+        {
+            var trans = await _applicationDbContext.Database.BeginTransactionAsync();
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(Email);
+                if (user == null) return "UserNotFound";
+                var removeresult = await _userManager.RemovePasswordAsync(user);
+                var addresult = await _userManager.AddPasswordAsync(user, Password);
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                await trans.RollbackAsync();
+                return "Failed";
+            }
+
         }
 
 
