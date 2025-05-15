@@ -213,6 +213,9 @@
   <data name="String1" xml:space="preserve">
     <value />
   </data>
+  <data name="String2" xml:space="preserve">
+    <value>حاول مره اخري في وقت لاحق</value>
+  </data>
   <data name="Success" xml:space="preserve">
     <value>عمليه ناجحه</value>
   </data>

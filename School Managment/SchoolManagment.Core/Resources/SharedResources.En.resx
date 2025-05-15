@@ -213,6 +213,9 @@
   <data name="TokenIsNotExpired" xml:space="preserve">
     <value>Token Is Not Expired</value>
   </data>
+  <data name="TryAgainInAnotherTime" xml:space="preserve">
+    <value>Try Again In Another Time</value>
+  </data>
   <data name="UnAuthorized" xml:space="preserve">
     <value>UnAuthorized</value>
   </data>

@@ -4,6 +4,7 @@ using SchoolManagment.Data.Entities.Identity;
 using SchoolManagment.Data.Helpers;
 using SchoolManagment.Data.Results;
 using SchoolManagment.Infrustructure.Abstract;
+using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Service.Abstracts;
 using System.Collections.Concurrent;
 using System.IdentityModel.Tokens.Jwt;
@@ -19,15 +20,18 @@ namespace SchoolManagment.Service.Services
         //private readonly ConcurrentDictionary<string, RefreshToken> _userRefreshToken;
         private readonly IRefreshTokenRepository _RefreshToken;
         private readonly UserManager<User> _userManager;
-
+        private readonly IEmailService _emailService;
+        private readonly ApplicationDbContext _applicationDbContext;
         #endregion
         #region  Ctor
-        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken)
+        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken, IEmailService emailService, ApplicationDbContext applicationDbContext)
         {
             _jwtSettings = jwtSettings;
             //_userRefreshToken = userRefreshToken;
             _RefreshToken = RefreshToken;
             _userManager = userManager;
+            _emailService = emailService;
+            _applicationDbContext = applicationDbContext;
         }
         #endregion
         #region Actions
@@ -201,6 +205,30 @@ namespace SchoolManagment.Service.Services
             if (!confirmEmail.Succeeded)
                 return "ErrorWhenConfirmEmail";
             return "Success";
+        }
+
+        public async Task<string> SendResetPasswordCode(string Email)
+        {
+            var trans = await _applicationDbContext.Database.BeginTransactionAsync();
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(Email);
+                if (user == null) return "UserNotFound";
+                Random generator = new Random();
+                string randomNumber = generator.Next(0, 100000).ToString("D6");
+                user.code = randomNumber;
+                var updataresult = await _userManager.UpdateAsync(user);
+                if (!updataresult.Succeeded) return "ErrorInUpdateUser";
+                var message = $"Code to Reset Passward {randomNumber}";
+                await _emailService.SendEmailAsync(user.Email, message, "Reset Password");
+                await trans.CommitAsync();
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                await trans.RollbackAsync();
+                return "Failed";
+            }
         }
 
 

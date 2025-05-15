@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "EntityFrameworkCore.EncryptColumn/6.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp6.0/EntityFrameworkCore.EncryptColumn.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp6.0/EntityFrameworkCore.EncryptColumn.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.3.0": {
         "type": "package",
         "dependencies": {
@@ -833,6 +849,19 @@
     }
   },
   "libraries": {
+    "EntityFrameworkCore.EncryptColumn/6.0.8": {
+      "sha512": "AgnhI+4ZM0lySJKR4cEWvDe/EtGL9nIF3jAMz9XikAyMdbEknDTlj0ksSdLwq7OVXMh/ZsR0IuRHNkcnfXkGzQ==",
+      "type": "package",
+      "path": "entityframeworkcore.encryptcolumn/6.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
+        "entityframeworkcore.encryptcolumn.nuspec",
+        "lib/netcoreapp6.0/EntityFrameworkCore.EncryptColumn.dll",
+        "lib/netcoreapp6.0/EntityFrameworkCore.EncryptColumn.pdb"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.3.0": {
       "sha512": "Tq6bxTOe65Ikh9dWVTEOqpvNqBGIQueO0J+zl2rQba0yP0YV66iYDkSz9MqTdRZftvJ2I5kMeRUm9Z2mjEAbUQ==",
       "type": "package",
@@ -1921,6 +1950,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EntityFrameworkCore.EncryptColumn >= 6.0.8",
       "Microsoft.AspNetCore.Identity >= 2.3.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.11"
     ]
@@ -1964,6 +1994,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "EntityFrameworkCore.EncryptColumn": {
+            "target": "Package",
+            "version": "[6.0.8, )"
+          },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.3.1, )"

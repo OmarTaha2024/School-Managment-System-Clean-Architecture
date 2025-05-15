@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t8OSTPTb/JE0aic+MXuhDZPrDOgxYa7lI/+IZBqNP/wetWFRLSVtVJDmVHJHafbzdoLzq75+Eh/zHJpxyAVL3g==",
+  "dgSpecHash": "WquwbwJKlBNgjA3XhpFx3s1qijqWlMo5WULH8Ritm0cWJXVaM5T6K8Y2DouLm/XxQ7xCzpCFTzBhEiXlIkELHQ==",
   "success": true,
   "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\SchoolManagement.Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.encryptcolumn\\6.0.8\\entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.jamieencryptcolumn\\8.0.69\\entityframeworkcore.jamieencryptcolumn.8.0.69.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

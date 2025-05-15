@@ -199,6 +199,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EntityFrameworkCore.EncryptColumn": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.3.1, )"
@@ -268,6 +272,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EntityFrameworkCore.JamieEncryptColumn": {
+              "target": "Package",
+              "version": "[8.0.69, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.11, )"

@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YZ2sIyznsr37IVsT8XqbkXWP3okqDn/+WsjiC6ex2lvasgpMPCdyA5vK+0uGD5LJMHMh622tMnmL4x5sDyBr6g==",
+  "dgSpecHash": "OPkRBrethRuRtPDS0qcbXcY5cEOhksGlCqT3L+hvh3THyijMjV1KotmEz+l5OS60Foi6OnxljZ0B/qANAVUxCQ==",
   "success": true,
   "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Infrustructure\\SchoolManagment.Infrustructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.encryptcolumn\\6.0.8\\entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.jamieencryptcolumn\\8.0.69\\entityframeworkcore.jamieencryptcolumn.8.0.69.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

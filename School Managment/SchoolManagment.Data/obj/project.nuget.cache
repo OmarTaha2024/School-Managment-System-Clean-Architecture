@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Taj9X1WI5C3KDTRGRvQN1pb69TdY62DAX/G+uZRtJWm51n8+T3dNZyW2gL5dRATdocyCDUVhebltizQKH2ZFZg==",
+  "dgSpecHash": "/G1E2rjuLJgEhd9atTTw8x54aMvSCtclXtMLCdIDQLukrIsG9ChWhANvDgd8G0dLwBnkJIHoPvrXGi+KiMKA+Q==",
   "success": true,
   "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Data\\SchoolManagment.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.encryptcolumn\\6.0.8\\entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.3.0\\microsoft.aspnetcore.authentication.cookies.2.3.0.nupkg.sha512",

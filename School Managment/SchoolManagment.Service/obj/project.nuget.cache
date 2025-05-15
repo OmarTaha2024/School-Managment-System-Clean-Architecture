@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "y1ubJEo86ADPj/E11/5nUzJmaXSazep0bgbgMUBiFBZyLwqwvA4OEfaUnlyEuhm9IZaugHfVvhNDICksNHjIzg==",
+  "dgSpecHash": "bAgKZAgZyI0JdTjoo39UhfFIUmAKYdEh2dFR7RwPFOD+XXmtpp2XLGqpNj1YAfW41lhLxOFZX5Y4HJADaeEdJQ==",
   "success": true,
   "projectFilePath": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagment.Service\\SchoolManagment.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.encryptcolumn\\6.0.8\\entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\entityframeworkcore.jamieencryptcolumn\\8.0.69\\entityframeworkcore.jamieencryptcolumn.8.0.69.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mailkit\\4.12.0\\mailkit.4.12.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

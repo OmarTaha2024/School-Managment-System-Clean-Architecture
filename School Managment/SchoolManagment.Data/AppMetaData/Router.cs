@@ -43,6 +43,7 @@
             public const string SignIn = prefix + "/SignIn";
             public const string RefreshToken = prefix + "/RefreshToken";
             public const string ValidateToken = prefix + "/ValidateToken";
+            public const string SendResetPasswordCode = prefix + "/SendResetPasswordCode";
             public const string ConfirmEmail = prefix + "/Api/Authentication/ConfirmEmail";
 
 
