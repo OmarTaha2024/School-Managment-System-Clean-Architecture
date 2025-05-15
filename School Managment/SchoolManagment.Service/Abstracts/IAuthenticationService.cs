@@ -13,5 +13,6 @@ namespace SchoolManagment.Service.Abstracts
         public Task<(string, DateTime?)> ValidateDetails(JwtSecurityToken jwtToken, string AccessToken, string RefreshToken);
         public Task<string> ConfirmEmail(string? userId, string? code);
         public Task<string> SendResetPasswordCode(string Email);
+        public Task<string> ConfirmResetPassword(string Email, string code);
     }
 }

@@ -40,5 +40,11 @@ namespace SchoolManagement.Api.Controllers
             var response = await Mediator.Send(command);
             return NewResult(response);
         }
+        [HttpGet(Router.Authentication.ConfirmResetPassward)]
+        public async Task<IActionResult> ConfirmResetPassword([FromQuery] ConfirmResetPasswordQuery query)
+        {
+            var response = await Mediator.Send(query);
+            return NewResult(response);
+        }
     }
 }

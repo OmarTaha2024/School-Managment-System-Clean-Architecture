@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using EntityFrameworkCore.EncryptColumn.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using SchoolManagment.Data.Entities.Identity;
 using SchoolManagment.Data.Helpers;
@@ -24,7 +25,7 @@ namespace SchoolManagment.Service.Services
         private readonly ApplicationDbContext _applicationDbContext;
         #endregion
         #region  Ctor
-        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken, IEmailService emailService, ApplicationDbContext applicationDbContext)
+        public AuthenticationService(UserManager<User> userManager, JwtSettings jwtSettings, ConcurrentDictionary<string, RefreshToken> userRefreshToken, IRefreshTokenRepository RefreshToken, IEmailService emailService, ApplicationDbContext applicationDbContext, IEncryptionProvider encryptionProvider)
         {
             _jwtSettings = jwtSettings;
             //_userRefreshToken = userRefreshToken;
@@ -32,6 +33,7 @@ namespace SchoolManagment.Service.Services
             _userManager = userManager;
             _emailService = emailService;
             _applicationDbContext = applicationDbContext;
+            _encryptionProvider = encryptionProvider;
         }
         #endregion
         #region Actions
@@ -229,6 +231,15 @@ namespace SchoolManagment.Service.Services
                 await trans.RollbackAsync();
                 return "Failed";
             }
+        }
+
+        public async Task<string> ConfirmResetPassword(string Email, string code)
+        {
+            var user = await _userManager.FindByEmailAsync(Email);
+            if (user == null) return "UserNotFound";
+            var usercode = user.code;
+            if (usercode == code) return "Success";
+            return "Failed";
         }
 
 
