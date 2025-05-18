@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
 using SchoolManagment.Data.Entities.Identity;
+using SchoolManagment.Data.Entities.Views;
 using System.Reflection;
 
 namespace SchoolManagment.Infrustructure.Context
@@ -26,6 +27,10 @@ namespace SchoolManagment.Infrustructure.Context
         public DbSet<DepartmetSubject> DepartmetSubject { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Ins_Subject> Ins_Subject { get; set; }
+
+        #region Views
+        public DbSet<ViewDepartment> ViewDepartment { get; set; }
+        #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

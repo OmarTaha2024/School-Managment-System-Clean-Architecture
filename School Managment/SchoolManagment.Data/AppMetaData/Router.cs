@@ -22,6 +22,7 @@
         {
             public const string prefix = Rule + "Department";
             public const string GetByID = prefix + "/ID";
+            public const string GetDepartmentStudentsCount = prefix + "/GetDepartmentStudentsCount";
 
         }
         public static class ApplicationUserRouting
