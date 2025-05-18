@@ -12,7 +12,8 @@ using System.Linq.Expressions;
 
 namespace SchoolManagment.Core.Features.Departments.Queries.Handlers
 {
-    public class DepartmentQueryHandeler : ResponseHandler, IRequestHandler<GetDepartmentByIDQuery, Response<GetSingleDepartmentResponse>>
+    public class DepartmentQueryHandeler : ResponseHandler, IRequestHandler<GetDepartmentByIDQuery, Response<GetSingleDepartmentResponse>>,
+        IRequestHandler<GetDepartmentStudentListCountQuery, Response<List<GetDepartmentStudentListCountResults>>>
     {
         #region Fields
         private readonly IDepartmentService _departmentService;
@@ -51,6 +52,13 @@ namespace SchoolManagment.Core.Features.Departments.Queries.Handlers
             department_mapper.studentList = paginatedlist;
 
             return Success(department_mapper);
+        }
+
+        public async Task<Response<List<GetDepartmentStudentListCountResults>>> Handle(GetDepartmentStudentListCountQuery request, CancellationToken cancellationToken)
+        {
+            var Departmentlist = await _departmentService.GetViewDepartmentDataAsync();
+            var mapperlist = _mapper.Map<List<GetDepartmentStudentListCountResults>>(Departmentlist);
+            return Success<List<GetDepartmentStudentListCountResults>>(mapperlist);
         }
     }
 }

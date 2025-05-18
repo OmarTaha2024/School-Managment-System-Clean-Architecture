@@ -1,4 +1,5 @@
 ﻿using SchoolManagment.Data.Entities;
+using SchoolManagment.Data.Entities.Views;
 
 namespace SchoolManagment.Service.Abstracts
 {
@@ -6,6 +7,7 @@ namespace SchoolManagment.Service.Abstracts
     {
         public Task<Department> GetDepartmentByIdAsync(int id);
         public Task<bool> IsDeptExist(int id);
+        public Task<List<ViewDepartment>> GetViewDepartmentDataAsync();
 
     }
 }
