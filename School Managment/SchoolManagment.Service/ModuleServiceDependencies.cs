@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SchoolManagment.Data.Results;
 using SchoolManagment.Service.Abstracts;
+using SchoolManagment.Service.AuthServices.Implementations;
+using SchoolManagment.Service.AuthServices.Interfaces;
 using SchoolManagment.Service.Services;
 using System.Collections.Concurrent;
 
@@ -16,6 +18,7 @@ namespace SchoolManagment.Service
             services.AddTransient<IAuthorizationService, AuthorizationService>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
+            services.AddTransient<ICurrentUserService, CurrentUserService>();
             services.AddSingleton<ConcurrentDictionary<string, RefreshToken>>();
 
             return services;
