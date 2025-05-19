@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Data.Entities;
+using SchoolManagment.Data.Entities.Procedures;
 using SchoolManagment.Data.Entities.Views;
 using SchoolManagment.Infrustructure.Abstract;
+using SchoolManagment.Infrustructure.Abstract.Procedures;
 using SchoolManagment.Infrustructure.Abstract.Views;
 using SchoolManagment.Service.Abstracts;
 
@@ -12,13 +14,15 @@ namespace SchoolManagment.Service.Services
         #region Fields
         private readonly IDepartmentRepository _departmentRepository;
         private readonly IViewRepository<ViewDepartment> _Iviewdepartment;
+        private readonly IDepartmentStudentCountProcRepository _departmentStudentCountProcRepository;
         #endregion
         #region Ctor
 
-        public DepartmentService(IDepartmentRepository departmentRepository, IViewRepository<ViewDepartment> Iviewdepartment)
+        public DepartmentService(IDepartmentRepository departmentRepository, IViewRepository<ViewDepartment> Iviewdepartment, IDepartmentStudentCountProcRepository departmentStudentCountProcRepository)
         {
             _departmentRepository = departmentRepository;
             _Iviewdepartment = Iviewdepartment;
+            _departmentStudentCountProcRepository = departmentStudentCountProcRepository;
         }
 
 
@@ -33,6 +37,11 @@ namespace SchoolManagment.Service.Services
             .Include(x => x.Instructor)
             .FirstOrDefaultAsync();
             return department;
+        }
+
+        public async Task<IReadOnlyList<DepartmentStudentCountProc>> GetDepartmentStudentCountProcsService(DepartmentStudentCountProcParameter parameters)
+        {
+            return await _departmentStudentCountProcRepository.GetDepartmentStudentCountProcs(parameters);
         }
 
         public async Task<List<ViewDepartment>> GetViewDepartmentDataAsync()

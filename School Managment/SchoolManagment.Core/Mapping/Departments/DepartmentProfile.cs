@@ -8,6 +8,7 @@ namespace SchoolManagment.Core.Mapping.Departments
         {
             GetDepartmentByIDMapping();
             GetDepartmentStudentCountMapping();
+            GetDepartmentStudentCountByIdMapping();
         }
     }
 }
