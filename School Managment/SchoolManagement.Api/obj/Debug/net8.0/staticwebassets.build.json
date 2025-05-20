@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "fs1JEmZ2RzdNg7Ej6uXSa46WwYbwSZTlUW2UKvjgzKg=",
+  "Hash": "q7SCNT48v8h3RkbED0vG3iuOm7UQHoPwiqeMJB3k2lU=",
   "Source": "SchoolManagement.Api",
   "BasePath": "_content/SchoolManagement.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SchoolManagement.Api\\wwwroot",
+      "Source": "SchoolManagement.Api",
+      "ContentRoot": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\wwwroot\\",
+      "BasePath": "_content/SchoolManagement.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

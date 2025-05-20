@@ -77,6 +77,7 @@
         {
             public const string prefix = Rule + "InstructorRouting";
             public const string GetSalarySummationOfInstructor = prefix + "/GetSalarySummationOfInstructor";
+            public const string AddInstructor = prefix + "/AddInstructor";
 
 
         }
