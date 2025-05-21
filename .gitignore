@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/School Managment/SchoolManagement.Api/.vs/SchoolManagement.Api/v17/.suo
+/School Managment/SchoolManagement.Api/obj/Debug/net8.0/SchoolManagement.Api.csproj.AssemblyReference.cache
+/School Managment/SchoolManagment.Core/obj/Debug/net8.0/SchoolManagment.Core.csproj.AssemblyReference.cache
+/School Managment/SchoolManagment.Infrustructure/obj/Debug/net8.0/SchoolManagment.Infrustructure.csproj.AssemblyReference.cache
+/School Managment/SchoolManagment.Service/obj/Debug/net8.0/SchoolManagment.Service.csproj.AssemblyReference.cache
