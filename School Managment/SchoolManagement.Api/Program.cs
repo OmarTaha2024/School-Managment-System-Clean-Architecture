@@ -12,6 +12,7 @@ using SchoolManagment.Infrustructure;
 using SchoolManagment.Infrustructure.Context;
 using SchoolManagment.Infrustructure.Seeder;
 using SchoolManagment.Service;
+using Serilog;
 using System.Globalization;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,6 +77,10 @@ builder.Services.AddTransient<IUrlHelper>(x =>
     var factory = x.GetRequiredService<IUrlHelperFactory>();
     return factory.GetUrlHelper(actionContext);
 });
+//Serilog
+Log.Logger = new LoggerConfiguration()
+              .ReadFrom.Configuration(builder.Configuration).CreateLogger();
+builder.Services.AddSerilog();
 var app = builder.Build();
 #endregion
 using (var scope = app.Services.CreateScope())
@@ -85,6 +90,8 @@ using (var scope = app.Services.CreateScope())
     await RoleSeeder.SeedAsync(roleManager);
     await UserSeeder.SeedAsync(userManager);
 }
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -104,5 +111,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseStaticFiles();
 app.Run();

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using SchoolManagment.Core.Bases;
+using Serilog;
 using System.Net;
 using System.Text.Json;
 namespace SchoolManagment.Core.MiddleWare
@@ -9,10 +10,12 @@ namespace SchoolManagment.Core.MiddleWare
     public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly ILogger _logger;
 
-        public ErrorHandlerMiddleware(RequestDelegate next)
+        public ErrorHandlerMiddleware(RequestDelegate next, ILogger logger)
         {
             _next = next;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -26,6 +29,7 @@ namespace SchoolManagment.Core.MiddleWare
                 var response = context.Response;
                 response.ContentType = "application/json";
                 var responseModel = new Response<string>() { Succeeded = false, Message = error?.Message };
+                _logger.Information(error, "Error", context.Request, "");
                 //TODO:: cover all validation errors
                 switch (error)
                 {

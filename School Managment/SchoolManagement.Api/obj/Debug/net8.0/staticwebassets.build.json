@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "fs1JEmZ2RzdNg7Ej6uXSa46WwYbwSZTlUW2UKvjgzKg=",
+  "Hash": "dOu53N2FmEopUMXpfF3ToaRiXhxjXQB+Uv7xyo5eq3w=",
   "Source": "SchoolManagement.Api",
   "BasePath": "_content/SchoolManagement.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "SchoolManagement.Api\\wwwroot",
+      "Source": "SchoolManagement.Api",
+      "ContentRoot": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\wwwroot\\",
+      "BasePath": "_content/SchoolManagement.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\wwwroot\\Instructors\\75e880c19ee74982898ffb306006c7f8.jpg",
+      "SourceId": "SchoolManagement.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\School-Managment-System-Clean-Architecture\\School Managment\\SchoolManagement.Api\\wwwroot\\",
+      "BasePath": "_content/SchoolManagement.Api",
+      "RelativePath": "Instructors/75e880c19ee74982898ffb306006c7f8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Instructors\\75e880c19ee74982898ffb306006c7f8.jpg"
+    }
+  ]
 }
