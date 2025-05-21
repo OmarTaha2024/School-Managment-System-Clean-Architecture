@@ -3,7 +3,7 @@ using SchoolManagment.Infrustructure.InfrustructureBases;
 
 namespace SchoolManagment.Infrustructure.Abstract
 {
-    public interface IInstructorRepository : IGenericRepositoryAsync<Instructor>
+    public interface IInstructorsRepository : IGenericRepositoryAsync<Instructor>
     {
     }
 }

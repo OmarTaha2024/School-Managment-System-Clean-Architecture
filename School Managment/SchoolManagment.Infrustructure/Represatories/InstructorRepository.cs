@@ -6,7 +6,7 @@ using SchoolManagment.Infrustructure.InfrustructureBases;
 
 namespace SchoolManagment.Infrustructure.Represatories
 {
-    public class InstructorRepository : GenericRepositoryAsync<Instructor>, IInstructorRepository
+    public class InstructorRepository : GenericRepositoryAsync<Instructor>, IInstructorsRepository
     {
 
         #region Fields
