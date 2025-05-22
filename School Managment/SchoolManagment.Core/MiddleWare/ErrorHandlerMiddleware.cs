@@ -10,12 +10,12 @@ namespace SchoolManagment.Core.MiddleWare
     public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger _logger;
+        //private readonly ILogger _logger;
 
-        public ErrorHandlerMiddleware(RequestDelegate next, ILogger logger)
+        public ErrorHandlerMiddleware(RequestDelegate next/*, ILogger logger*/)
         {
             _next = next;
-            _logger = logger;
+            //_logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -29,7 +29,7 @@ namespace SchoolManagment.Core.MiddleWare
                 var response = context.Response;
                 response.ContentType = "application/json";
                 var responseModel = new Response<string>() { Succeeded = false, Message = error?.Message };
-                _logger.Information(error, "Error", context.Request, "");
+                Log.Error(error, error.Message, context.Request, "");
                 //TODO:: cover all validation errors
                 switch (error)
                 {

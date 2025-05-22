@@ -37,13 +37,13 @@ builder.Services.AddModuleInfrustructureDependencies()
 
 #region Localization
 builder.Services.AddLocalization(opt =>
-    {
-        opt.ResourcesPath = "";
-    });
+{
+    opt.ResourcesPath = "";
+});
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
-    {
-        List<CultureInfo> supportedCultures = new List<CultureInfo>
+{
+    List<CultureInfo> supportedCultures = new List<CultureInfo>
         {
             new CultureInfo("en-US"),
             new CultureInfo("de-DE"),
@@ -51,10 +51,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
             new CultureInfo("ar-EG")
         };
 
-        options.DefaultRequestCulture = new RequestCulture("ar-EG");
-        options.SupportedCultures = supportedCultures;
-        options.SupportedUICultures = supportedCultures;
-    });
+    options.DefaultRequestCulture = new RequestCulture("ar-EG");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
 
 #endregion
 
