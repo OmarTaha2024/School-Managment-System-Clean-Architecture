@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.Extensions.Localization;
 using SchoolManagment.Core.Bases;
@@ -49,11 +50,19 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
         //}
         public async Task<Response<List<GetStudentListResponse>>> Handle(GetStudentListQuery request, CancellationToken cancellationToken)
         {
-            var StudentList = await _studentService.GetStudentsListAsync();
-            var StudentListMapper = _mapper.Map<List<GetStudentListResponse>>(StudentList);
+
+            var StudentListMapper = _studentService.GetStudentsQueryableList().ProjectTo<GetStudentListResponse>(_mapper.ConfigurationProvider).ToList();
+
             var Result = Success(StudentListMapper);
             Result.Meta = new { count = StudentListMapper.Count() };
             return Result;
+            //// Using Auto Mapper 
+            //var StudentList = await _studentService.GetStudentsListAsync();
+            //var StudentListMapper = _mapper.Map<List<GetStudentListResponse>>(StudentList);
+            //var Result = Success(StudentListMapper);
+            //Result.Meta = new { count = StudentListMapper.Count() };
+            //return Result;
+
         }
 
         public async Task<Response<GetSingleStudentResponse>> Handle(GetStudentByIDQuery request, CancellationToken cancellationToken)
@@ -66,6 +75,61 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
             var Result = _mapper.Map<GetSingleStudentResponse>(student);
             return Success(Result);
         }
+        /// <summary>
+        ///  make projection in database not as auto mappeer in RAM
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Task<PaginatedResult<GetStudentPaginatedListResponse>></returns>
+        //public async Task<PaginatedResult<GetStudentPaginatedListResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
+        //{
+        //    Expression<Func<Student, GetStudentPaginatedListResponse>> ex = ex => new GetStudentPaginatedListResponse(ex.StudID, ex.NameAr, ex.NameEn, ex.Address, ex.Department.DNameAr, ex.Department.DNameEn);
+        //    //  var queryable = _studentService.GetStudentsQueryableList();
+        //    var filterqueryable = _studentService.FilterStudentsPaginatedQueryable(request.OrderBy, request.Search);
+        //    var paginatedlist = await filterqueryable.Select(ex).ToPaginatedListAsync(request.PageNumber, request.PageSize);
+        //    var culture = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToLower();
+
+        //    foreach (var item in paginatedlist.Data)
+        //    {
+        //        item.Name = culture == "ar" ? item.NameAr : item.NameEn;
+        //        item.DeptName = culture == "ar" ? item.DeptNameAr : item.DeptNameEn;
+        //    }
+        //    var result = paginatedlist;
+        //    result.Meta = new { count = paginatedlist.Data.Count() };
+        //    return paginatedlist;
+        //}
+
+        /// Another way for projection  make projection in database not as auto mappeer in RAM
+
+        //public async Task<PaginatedResult<GetStudentPaginatedListResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
+        //{
+        //    Expression<Func<Student, GetStudentPaginatedListResponse>> ex;
+        //    var culture = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToLower();
+        //    if (culture == "ar")
+        //    {
+        //        ex = s => new GetStudentPaginatedListResponse
+        //        (s.StudID,
+        //            s.NameAr,
+        //            s.Address,
+        //             s.Department.DNameAr);
+        //    }
+        //    else
+        //    {
+        //        ex = s => new GetStudentPaginatedListResponse
+        //        (s.StudID,
+        //            s.NameEn,
+        //            s.Address,
+        //             s.Department.DNameEn);
+        //    }
+
+        //    //  var queryable = _studentService.GetStudentsQueryableList();
+        //    var filterqueryable = _studentService.FilterStudentsPaginatedQueryable(request.OrderBy, request.Search);
+        //    var paginatedlist = await filterqueryable.Select(ex).ToPaginatedListAsync(request.PageNumber, request.PageSize);
+        //    var result = paginatedlist;
+        //    result.Meta = new { count = paginatedlist.Data.Count() };
+        //    return paginatedlist;
+        //}
+        /// using bad way for orjection beacuse it made on RAM
         public async Task<PaginatedResult<GetStudentPaginatedListResponse>> Handle(GetStudentPaginatedListQuery request, CancellationToken cancellationToken)
         {
             Expression<Func<Student, GetStudentPaginatedListResponse>> ex = ex => new GetStudentPaginatedListResponse(ex.StudID, ex.GetLocalized(ex.NameAr, ex.NameEn), ex.Address, ex.Department.GetLocalized(ex.NameAr, ex.NameEn));
@@ -76,7 +140,6 @@ namespace SchoolManagment.Core.Features.Students.Queries.Handlers
             result.Meta = new { count = paginatedlist.Data.Count() };
             return paginatedlist;
         }
-
         #endregion
 
     }

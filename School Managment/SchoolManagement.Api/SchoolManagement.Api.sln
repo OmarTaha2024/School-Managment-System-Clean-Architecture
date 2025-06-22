@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagement.Api", "SchoolManagement.Api.csproj", "{C30B80ED-EA53-474A-9636-E0C1F1211214}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolManagement.Api", "SchoolManagement.Api.csproj", "{C30B80ED-EA53-474A-9636-E0C1F1211214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagment.Data", "..\SchoolManagment.Data\SchoolManagment.Data.csproj", "{96EC76DF-0CF7-44F4-9414-A427A761825E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolManagment.Data", "..\SchoolManagment.Data\SchoolManagment.Data.csproj", "{96EC76DF-0CF7-44F4-9414-A427A761825E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagment.Infrustructure", "..\SchoolManagment.Infrustructure\SchoolManagment.Infrustructure.csproj", "{9DC7EE53-84DB-4D04-B572-C77D6856EC0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolManagment.Infrustructure", "..\SchoolManagment.Infrustructure\SchoolManagment.Infrustructure.csproj", "{9DC7EE53-84DB-4D04-B572-C77D6856EC0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagment.Service", "..\SchoolManagment.Service\SchoolManagment.Service.csproj", "{D0885FB4-3CED-40C5-A071-537F25C774CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolManagment.Service", "..\SchoolManagment.Service\SchoolManagment.Service.csproj", "{D0885FB4-3CED-40C5-A071-537F25C774CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagment.Core", "..\SchoolManagment.Core\SchoolManagment.Core.csproj", "{CE4C563F-D606-4FA5-853D-70BCC1021D47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolManagment.Core", "..\SchoolManagment.Core\SchoolManagment.Core.csproj", "{CE4C563F-D606-4FA5-853D-70BCC1021D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagment.XUnitTest", "..\SchoolManagment.XUnitTest\SchoolManagment.XUnitTest.csproj", "{B4821B8B-0D3E-4500-BF18-E9918862895F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CE4C563F-D606-4FA5-853D-70BCC1021D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE4C563F-D606-4FA5-853D-70BCC1021D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE4C563F-D606-4FA5-853D-70BCC1021D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4821B8B-0D3E-4500-BF18-E9918862895F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4821B8B-0D3E-4500-BF18-E9918862895F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4821B8B-0D3E-4500-BF18-E9918862895F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4821B8B-0D3E-4500-BF18-E9918862895F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
