@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentAssertions;
 using Microsoft.Extensions.Localization;
+using MockQueryable;
 using Moq;
 using SchoolManagment.Core.Features.Students.Queries.Handlers;
 using SchoolManagment.Core.Features.Students.Queries.Models;
@@ -104,7 +105,8 @@ namespace SchoolManagment.XUnitTest.CoreTests.Students.Queries
             };
 
             var query = new GetStudentPaginatedListQuery() { PageNumber = 1, PageSize = 10, OrderBy = StudentOrderingEnum.StudID, Search = "mohamed" };
-            _studentServiceMock.Setup(x => x.FilterStudentsPaginatedQueryable(query.OrderBy, query.Search)).Returns(studentList.AsQueryable());
+            var mockQueryable = studentList.AsQueryable().BuildMock();
+            _studentServiceMock.Setup(x => x.FilterStudentsPaginatedQueryable(query.OrderBy, query.Search)).Returns(mockQueryable);
 
             var handler = new StudentQueryHandeler(_studentServiceMock.Object, _mapperMock, _localizerMock.Object);
 
